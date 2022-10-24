@@ -15,36 +15,22 @@ def run_all_FewNERD():
     script = 'python3 train_demo.py  --mode {mode} \
 --lr 3e-5 --batch_size {bsz} --trainN {trainN} --N {testN} --K {testK} --Q {testQ} \
 --train_iter 10000 --val_iter 500 --test_iter 5000 --val_step 1000 \
---max_length {mx_len} --model PromptNCA --tau 0.05 --seed {seed} --mix-rate {mix_rate} --topk {testK} --use_sampled_data --name RUN_ALL_ProML_ablation_FewNERD_{exp_type}_seed={seed}_mix-rate={mix_rate} --proj-dim 128 --with-dropout --trainK {trainK} > outputs/run_all_logs/RUN_ALL_ProML_ablation_FewNERD_{exp_type}_seed={seed}_mix-rate={mix_rate}'
+--max_length {mx_len} --model PromptNCA --tau 0.05 --seed {seed} --mix-rate {mix_rate} --topk {testK} --use_sampled_data --name RUN_ALL_ProML_ablation_FewNERD_{exp_type}_seed={seed}_mix-rate={mix_rate} --proj-dim 128 --with-dropout --trainK {trainK} > outputs/run_all_logs/RUN_ALL_ProML_FewNERD_{exp_type}_seed={seed}_mix-rate={mix_rate}'
 
 
     scripts_list = []
     for seed in range(5):
-        for mix_rate in [0, 1, -0.3, -0.5, -0.7]:
+        for mix_rate in [0.3, 0.5, 0.7]:
             intra5way1shot = script.format(mode='intra', bsz=4, trainN=5, trainK=1, testN=5, testK=1, testQ=1, mx_len=64, seed=seed, mix_rate=mix_rate, exp_type='INTRA5way1shot')
             intra5way5shot = script.format(mode='intra', bsz=1, trainN=5, trainK=5, testN=5, testK=5, testQ=5, mx_len=32, seed=seed, mix_rate=mix_rate, exp_type='INTRA5way5shot')
             inter5way1shot = script.format(mode='inter', bsz=4, trainN=5, trainK=1, testN=5, testK=1, testQ=1, mx_len=64, seed=seed, mix_rate=mix_rate, exp_type='INTER5way1shot')
             inter5way5shot = script.format(mode='inter', bsz=1, trainN=5, trainK=5, testN=5, testK=5, testQ=5, mx_len=32, seed=seed, mix_rate=mix_rate, exp_type='INTER5way5shot')
 
-            # intra10way1shot = script.format(mode='intra', bsz=4, trainN=10, trainK=1, testN=10, testK=1, testQ=1, mx_len=64, seed=seed, mix_rate=mix_rate, exp_type='INTRA10way1shot')
-            # intra10way5shot = script.format(mode='intra', bsz=1, trainN=10, trainK=5, testN=10, testK=5, testQ=5, mx_len=32, seed=seed, mix_rate=mix_rate, exp_type='INTRA10way5shot')
-            # inter10way1shot = script.format(mode='inter', bsz=4, trainN=10, trainK=1, testN=10, testK=1, testQ=1, mx_len=64, seed=seed, mix_rate=mix_rate, exp_type='INTER10way1shot')
-            # inter10way5shot = script.format(mode='inter', bsz=1, trainN=10, trainK=5, testN=10, testK=5, testQ=5, mx_len=32, seed=seed, mix_rate=mix_rate, exp_type='INTER10way5shot')
-
-            # for exec_script in [intra5way1shot, intra5way5shot, inter5way1shot, inter5way5shot, intra10way1shot, intra10way5shot, inter10way1shot, inter10way5shot]:
-            #     scripts_list.append(exec_script)
             
             
             for exec_script in [intra5way1shot, intra5way5shot, inter5way1shot, inter5way5shot]:
                 scripts_list.append(exec_script)
 
-            # for exec_script in [inter5way1shot, inter5way5shot]:
-            #     scripts_list.append(exec_script)
-
-            # if (seed == 2 and mix_rate in [0.3, 0.5]) or (seed == 0 and mix_rate == 0.3):
-            #     scripts_list.append(intra5way5shot)
-            # if (seed == 1 and mix_rate in [0.5, 0.7]) or (seed == 2 and mix_rate == 0.3):
-            #     scripts_list.append(inter5way5shot)
 
             
     return scripts_list
@@ -96,9 +82,9 @@ def run_all_DomainTransfer():
     for seed in range(1):
         for mix_rate in [0.3]:
             ontonotes1shot = script.format(mode='intra', bsz=4, trainN=5, trainK=1, testN=5, testK=1, testQ=1, mx_len=64, seed=seed, mix_rate=mix_rate, exp_type='1shot')
-            # ontonotes5shot = script.format(mode='intra', bsz=1, trainN=5, trainK=5, testN=5, testK=5, testQ=5, mx_len=32, seed=seed, mix_rate=mix_rate, exp_type='5shot')
+            ontonotes5shot = script.format(mode='intra', bsz=1, trainN=5, trainK=5, testN=5, testK=5, testQ=5, mx_len=32, seed=seed, mix_rate=mix_rate, exp_type='5shot')
 
-            for exec_script in [ontonotes1shot]:
+            for exec_script in [ontonotes1shot, ontonotes5shot]:
                 scripts_list.append(exec_script)
     return scripts_list
 
@@ -129,17 +115,11 @@ def DomainTransferEval():
         for seed in range(1):
             for mix_rate in [0.3]:
                 for eval_mix_rate in [0.1, 0.3, 0.5, 0.7, 0.9]:
-                    # if targetDomain in ['I2B2', 'WNUT']:
-                    #     continue
-                    if targetDomain != 'GUM':
-                        continue
+
                     ontonotes1shot = script.format(mode='intra', bsz=1, trainN=5, trainK=1, testN=5, totalN=totalN, testK=1, testQ=1, mx_len=64, seed=seed, mix_rate=mix_rate, eval_mix_rate=eval_mix_rate, exp_type='1shot', targetDomain=targetDomain, arg_dataset=arg_dataset)
-                    # ontonotes5shot = script.format(mode='intra', bsz=1, trainN=5, trainK=5, testN=5, totalN=totalN, testK=5, testQ=5, mx_len=32, seed=seed, mix_rate=mix_rate, eval_mix_rate=eval_mix_rate, exp_type='5shot', targetDomain=targetDomain, arg_dataset=arg_dataset)
+                    ontonotes5shot = script.format(mode='intra', bsz=1, trainN=5, trainK=5, testN=5, totalN=totalN, testK=5, testQ=5, mx_len=32, seed=seed, mix_rate=mix_rate, eval_mix_rate=eval_mix_rate, exp_type='5shot', targetDomain=targetDomain, arg_dataset=arg_dataset)
 
-                    # for exec_script in [ontonotes1shot, ontonotes5shot]:
-                    #     scripts_list.append(exec_script)
-
-                    for exec_script in [ontonotes1shot]:
+                    for exec_script in [ontonotes1shot, ontonotes5shot]:
                         scripts_list.append(exec_script)
     return scripts_list
 
@@ -254,31 +234,31 @@ def compute_stat_DomainTransfer():
         suffix = 'eval-mix-rate={}'.format(eval_mix_rate)
         print('|OURS(eval-mix-rate={})'.format(eval_mix_rate), end='')
         print_info(stat, ['1shot.*'+suffix+'.*CoNLL', '5shot.*'+suffix+'.*CoNLL', '1shot.*'+suffix+'.*WNUT', '5shot.*'+suffix+'.*WNUT', '1shot.*'+suffix+'.*I2B2', '5shot.*'+suffix+'.*I2B2', '1shot.*'+suffix+'.*GUM', '5shot.*'+suffix+'.*GUM'], suffix)
-        # print('|onlyB1+Awithsplit(eval-mix-rate={})'.format(eval_mix_rate), end='')
-        # print_info(stat, ['5shot.*'+suffix+'.*CoNLL', '5shot.*'+suffix+'.*WNUT', '5shot.*'+suffix+'.*I2B2'], suffix)
+
 
 
 
 if __name__ == '__main__':
-    # compute_stat_FewNERD()
-    compute_stat_OntoNotes()
-    # compute_stat_DomainTransfer()
     parser = argparse.ArgumentParser()
     parser.add_argument('--device', type=str)
     parser.add_argument('--start', type=int)
     parser.add_argument('--end', type=int)
     opt = parser.parse_args()
     # print(opt.start, opt.end)
-    # scripts = run_all_FewNERD() + run_all_OntoNotes() + run_all_DomainTransfer()
-    # scripts = DomainTransferEval()
-    # scripts = run_all_DomainTransfer()
-    # print(len(scripts))
-    # from tqdm import tqdm
-    # pbar = tqdm(scripts[opt.start: opt.end], total=len(scripts[opt.start: opt.end]))
-    # for script in pbar:
-    #     script = 'CUDA_VISIBLE_DEVICES={device} {command}'.format(device=opt.device, command=script)
-    #     print(script)
-    #     subprocess.call(script, shell=True)
+    scripts = run_all_FewNERD() + run_all_OntoNotes() + run_all_DomainTransfer()
+    scripts = DomainTransferEval()
+    scripts = run_all_DomainTransfer()
+    print(len(scripts))
+    from tqdm import tqdm
+    pbar = tqdm(scripts[opt.start: opt.end], total=len(scripts[opt.start: opt.end]))
+    for script in pbar:
+        script = 'CUDA_VISIBLE_DEVICES={device} {command}'.format(device=opt.device, command=script)
+        print(script)
+        subprocess.call(script, shell=True)
+
+    compute_stat_FewNERD()
+    compute_stat_OntoNotes()
+    compute_stat_DomainTransfer()
 
 
 
