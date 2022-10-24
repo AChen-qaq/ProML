@@ -1,0 +1,15 @@
+checkpoint
+bert-base-uncased
+eval_cases/*
+outputs/*
+__pycache__
+vis/*
+.mypy_cache
+data/episode-data
+data/inter
+data/intra
+data/ontoNotes
+*.zip
+*.tar.gz
+data/i2b2_raw.txt
+data/testing-PHI-Gold-fixed
