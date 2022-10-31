@@ -5,7 +5,6 @@ from util.word_encoder import BERTWordEncoder
 from model.proto import Proto
 from model.nnshot import NNShot
 from model.container import Container
-from model.klnnshot import KLnnshot
 from model.prompt_nca import PromptNCA
 from model.supervised import TransferBERT
 import sys
@@ -30,17 +29,17 @@ def set_seed(seed):
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--mode', default='inter',
+    parser.add_argument('--mode', default='intra',
                         help='training mode, must be in [inter, intra, supervised]')
-    parser.add_argument('--trainN', default=2, type=int,
+    parser.add_argument('--trainN', default=5, type=int,
                         help='N in train')
-    parser.add_argument('--N', default=2, type=int,
+    parser.add_argument('--N', default=5, type=int,
                         help='N way')
-    parser.add_argument('--trainK', default=2, type=int,
+    parser.add_argument('--trainK', default=1, type=int,
                         help='K in train')
-    parser.add_argument('--K', default=2, type=int,
+    parser.add_argument('--K', default=1, type=int,
                         help='K shot')
-    parser.add_argument('--Q', default=3, type=int,
+    parser.add_argument('--Q', default=1, type=int,
                         help='Num of query per class')
     parser.add_argument('--batch_size', default=4, type=int,
                         help='batch size')
@@ -95,20 +94,10 @@ def main():
 
     parser.add_argument('--proj-dim', type=int, default=32)
     parser.add_argument('--mask-rate', type=float)
-    parser.add_argument('--o-ambg', type=float)
-    parser.add_argument('--normalize', action='store_true',)
-    parser.add_argument('--norm', type=float, default=1)
-    parser.add_argument('--num-clusters', type=int)
-    parser.add_argument('--entropy-alpha', type=float, default=1)
-    parser.add_argument('--margin', type=float, default=30)
-    parser.add_argument('--triplet-mode', type=int, default=0)
-    parser.add_argument('--mix-NCA', action='store_true')
-    parser.add_argument('--with-dropout', action='store_true')
-    parser.add_argument('--train-without-proj', action='store_true')
-    parser.add_argument('--eval-with-proj', action='store_true')
+
     parser.add_argument('--eval-with-finetune', action='store_true')
     parser.add_argument('--visualize', action='store_true')
-    parser.add_argument('--use-conll', type=str, choices=['A', 'B', 'C'])
+    parser.add_argument('--use-onto-split', type=str, choices=['A', 'B', 'C'])
     parser.add_argument('--use-wnut', action='store_true')
     parser.add_argument('--use-ontonotes', action='store_true')
     parser.add_argument('--use-conll2003', action='store_true')
@@ -148,9 +137,9 @@ def main():
 
     set_seed(opt.seed)
     print('loading tokenizer...')
-    pretrain_ckpt = opt.pretrain_ckpt or 'bert-base-cased'
+    pretrain_ckpt = opt.pretrain_ckpt or 'bert-base-uncased'
 
-    tokenizer = BertTokenizer.from_pretrained('bert-base-cased', mirror='tuna')
+    tokenizer = BertTokenizer.from_pretrained('bert-base-uncased', mirror='tuna')
 
     print('loading data...')
     if not opt.use_sampled_data:
@@ -167,11 +156,11 @@ def main():
             os.system(f'bash data/download.sh episode-data')
             os.system('unzip -d data/ data/episode-data.zip')
 
-    if opt.use_conll is not None:
-        opt.train = 'data/ontoNotes/__train_{}.txt'.format(opt.use_conll)
-        opt.test = 'data/ontoNotes/__test_{}.txt'.format(opt.use_conll)
-        opt.dev = 'data/ontoNotes/__dev_{}.txt'.format(opt.use_conll)
-        dataset_name = 'OntoNotes_{}'.format(opt.use_conll)
+    if opt.use_onto_split is not None:
+        opt.train = 'data/ontoNotes/__train_{}.txt'.format(opt.use_onto_split)
+        opt.test = 'data/ontoNotes/__test_{}.txt'.format(opt.use_onto_split)
+        opt.dev = 'data/ontoNotes/__dev_{}.txt'.format(opt.use_onto_split)
+        dataset_name = 'OntoNotes_{}'.format(opt.use_onto_split)
 
     if opt.use_ontonotes:
         opt.train = 'data/ontoNotes/train.txt'
@@ -209,8 +198,8 @@ def main():
                                  N=N, K=K, Q=Q, batch_size=batch_size, max_length=max_length, ignore_index=opt.ignore_index, use_sampled_data=opt.use_sampled_data, no_shuffle=opt.no_shuffle)
     if opt.full_test:
         extra_data_loader = get_loader(opt.test, tokenizer,
-                                       N=opt.totalN, K=K, Q=Q, batch_size=1, max_length=max_length, ignore_index=opt.ignore_index, use_sampled_data=opt.use_sampled_data, i2b2flag=opt.use_i2b2 or opt.use_gum, dataset_name=dataset_name, no_shuffle=opt.no_shuffle)
-
+                                    N=opt.totalN, K=K, Q=Q, batch_size=1, max_length=max_length, ignore_index=opt.ignore_index, use_sampled_data=opt.use_sampled_data, i2b2flag=opt.use_i2b2 or opt.use_gum, dataset_name=dataset_name, no_shuffle=opt.no_shuffle)
+        
         test_data_loader_creator, test_data_set = get_loader(opt.test, tokenizer,
                                                              N=N, K=K, Q=Q, batch_size=batch_size, max_length=max_length, ignore_index=opt.ignore_index, use_sampled_data=opt.use_sampled_data, full_test=True, no_shuffle=opt.no_shuffle)
         test_data_loader = test_data_loader_creator, test_data_set
@@ -267,18 +256,6 @@ def main():
                           gaussian_dim=opt.proj_dim, o_ambg=opt.o_ambg)
         framework = FewShotNERFramework(train_data_loader, val_data_loader, test_data_loader, N=opt.N, tau=opt.tau, train_fname=opt.train,
                                         viterbi=False, use_sampled_data=opt.use_sampled_data, contrast=True, extra_data_loader=extra_data_loader if opt.full_test else None)
-    elif model_name == 'KLnnshot':
-        print('use KLnnshot')
-        model = KLnnshot(word_encoder, dot=opt.dot,
-                         ignore_index=opt.ignore_index)
-        framework = FewShotNERFramework(train_data_loader, val_data_loader,
-                                        test_data_loader, use_sampled_data=opt.use_sampled_data, KLnnshot=True)
-    elif model_name == 'triplet':
-        from model.triplet import Triplet
-        model = Triplet(word_encoder, dot=opt.dot, ignore_index=opt.ignore_index, proj_dim=opt.proj_dim,
-                        margin=opt.margin, triplet_mode=opt.triplet_mode, mix_NCA=opt.mix_NCA)
-        framework = FewShotNERFramework(train_data_loader, val_data_loader,
-                                        test_data_loader, use_sampled_data=opt.use_sampled_data, contrast=True)
 
     elif model_name == 'PromptNCA':
         print('use prompt_NCA')

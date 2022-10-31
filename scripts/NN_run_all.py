@@ -33,7 +33,7 @@ def run_all_OntoNotes():
     script = 'python3 train_demo.py  --mode {mode} \
 --lr 3e-5 --batch_size {bsz} --trainN {trainN} --N {testN} --K {testK} --Q {testQ} \
 --train_iter 10000 --val_iter 500 --test_iter 5000 --val_step 1000 \
---max_length {mx_len} --model nnshot --tau 0.05 --seed {seed} --name RUN_ALL_NNShot_OntoNotes_{exp_type}_seed={seed} --use-conll {label_set} --proj-dim 128 --with-dropout --trainK {trainK} > outputs/run_all_logs/RUN_ALL_NNShot_OntoNotes_{exp_type}_seed={seed}'
+--max_length {mx_len} --model nnshot --tau 0.05 --seed {seed} --name RUN_ALL_NNShot_OntoNotes_{exp_type}_seed={seed} --use-onto-split {label_set} --proj-dim 128 --with-dropout --trainK {trainK} > outputs/run_all_logs/RUN_ALL_NNShot_OntoNotes_{exp_type}_seed={seed}'
 
     scripts_list = []
     for seed in range(5):
@@ -79,7 +79,7 @@ def OntoNotesEval():
     script = 'python3 train_demo.py  --mode {mode} \
 --lr 3e-5 --batch_size {bsz} --trainN {trainN} --N {testN} --K {testK} --Q {testQ} \
 --train_iter 10000 --val_iter 500 --test_iter 5000 --val_step 1000 \
---max_length {mx_len} --model nnshot --tau 0.05 --seed {seed} --totalN {totalN} --topk 1 --name RUN_ALL_NNShot_OntoNotes_{exp_type}_seed={seed}_FULLTESTEVAL --proj-dim 128 --with-dropout --trainK {trainK} --only_test --full-test --use-conll {label_set} --load_ckpt=checkpoint/RUN_ALL_NNShot_OntoNotes_{exp_type}_seed={seed}.pth.tar > outputs/run_all_logs/TagExtensionEval/RUN_ALL_NNShot_OntoNotes_{exp_type}_seed={seed}_FULLTESTEVAL'
+--max_length {mx_len} --model nnshot --tau 0.05 --seed {seed} --totalN {totalN} --topk 1 --name RUN_ALL_NNShot_OntoNotes_{exp_type}_seed={seed}_FULLTESTEVAL --proj-dim 128 --with-dropout --trainK {trainK} --only_test --full-test --use-onto-split {label_set} --load_ckpt=checkpoint/RUN_ALL_NNShot_OntoNotes_{exp_type}_seed={seed}.pth.tar > outputs/run_all_logs/TagExtensionEval/RUN_ALL_NNShot_OntoNotes_{exp_type}_seed={seed}_FULLTESTEVAL'
     scripts_list = []
     for data_split, totalN in zip(['A', 'B', 'C'], [6, 6, 6]):
         for seed in range(1):

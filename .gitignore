@@ -13,3 +13,4 @@ data/ontoNotes
 *.tar.gz
 data/i2b2_raw.txt
 data/testing-PHI-Gold-fixed
+test.out

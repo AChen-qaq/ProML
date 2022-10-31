@@ -125,11 +125,7 @@ class FewShotNERDatasetWithRandomSampling(data.Dataset):
         return tokens, labels
 
     def construct_prompt_tanl(self, tokens, labels):
-        from random import randint
-        opt = randint(0, 0)
-        # token -> ids
-        # tokens_tanl = ['support', 'cases', '(', 'type', 'A' if opt == 0 else 'B', ')', ':']
-        # text_mask_tanl = [0, 0, 0, 0, 0, 0, 0]
+
 
         tokens_tanl = []
         text_mask_tanl = []
@@ -137,88 +133,49 @@ class FewShotNERDatasetWithRandomSampling(data.Dataset):
         label_tanl = []
         lst_tag = None
 
-        
 
-        if opt == 0:
-
-            for token, tag in zip(tokens, labels):
-                if lst_tag is not None and lst_tag != tag and lst_tag > 0:
-                    # label_seq = self.label2tag[lst_tag].split('-')[-1]
-                    label_seq = self.label2tag[lst_tag].replace('-', ' - ')
-                    label_seq = label_seq.replace('/', ' / ')
-                    tokens_tanl.extend(['|']+label_seq.split()+[']'])
-                    text_mask_tanl.extend([0]+[-2]*len(label_seq.split())+[0])
-                    label_tanl.extend([tag] * (len(label_seq.split()) + 2))
-                if tag > 0 and (lst_tag is None or lst_tag != tag):
-                    tokens_tanl.extend(['['])
-                    text_mask_tanl.extend([0])
-                    label_tanl.extend([tag])
-                
-                tokens_tanl.extend([ token ])
-                text_mask_tanl.extend([ 1 ])
-                label_tanl.extend([ tag ])
-                lst_tag = tag
-
-            if lst_tag is not None and lst_tag > 0:
+        for token, tag in zip(tokens, labels):
+            if lst_tag is not None and lst_tag != tag and lst_tag > 0:
                 # label_seq = self.label2tag[lst_tag].split('-')[-1]
                 label_seq = self.label2tag[lst_tag].replace('-', ' - ')
                 label_seq = label_seq.replace('/', ' / ')
                 tokens_tanl.extend(['|']+label_seq.split()+[']'])
                 text_mask_tanl.extend([0]+[-2]*len(label_seq.split())+[0])
-                label_tanl.extend([lst_tag] * (len(label_seq.split()) + 2))
+                label_tanl.extend([tag] * (len(label_seq.split()) + 2))
+            if tag > 0 and (lst_tag is None or lst_tag != tag):
+                tokens_tanl.extend(['['])
+                text_mask_tanl.extend([0])
+                label_tanl.extend([tag])
+            
+            tokens_tanl.extend([ token ])
+            text_mask_tanl.extend([ 1 ])
+            label_tanl.extend([ tag ])
+            lst_tag = tag
 
-        # if opt == 1:
-        #     for token, tag in zip(tokens, labels):
-        #         if lst_tag is not None and lst_tag != tag and lst_tag > 0:
-        #             # label_seq = self.label2tag[lst_tag].split('-')[-1]
-        #             label_seq = self.label2tag[lst_tag].replace('-', ' - ')
-        #             label_seq = label_seq.replace('/', ' / ')
-        #             tokens_tanl.extend(['(']+label_seq.split()+[')'])
-        #             text_mask_tanl.extend([0]+[-2]*len(label_seq.split())+[0])
-        #             label_tanl.extend([tag] * (len(label_seq.split()) + 2))
+        if lst_tag is not None and lst_tag > 0:
+            # label_seq = self.label2tag[lst_tag].split('-')[-1]
+            label_seq = self.label2tag[lst_tag].replace('-', ' - ')
+            label_seq = label_seq.replace('/', ' / ')
+            tokens_tanl.extend(['|']+label_seq.split()+[']'])
+            text_mask_tanl.extend([0]+[-2]*len(label_seq.split())+[0])
+            label_tanl.extend([lst_tag] * (len(label_seq.split()) + 2))
 
-                
-        #         tokens_tanl.extend([ token ])
-        #         text_mask_tanl.extend([ 1 ])
-        #         label_tanl.extend([ tag ])
-        #         lst_tag = tag
-
-        #     if lst_tag is not None and lst_tag > 0:
-        #         label_seq = self.label2tag[lst_tag].split('-')[-1]
-        #         label_seq = label_seq.replace('/', ' / ')
-        #         tokens_tanl.extend(['(']+label_seq.split()+[')'])
-        #         text_mask_tanl.extend([0]+[-2]*len(label_seq.split())+[0])
-        #         label_tanl.extend([lst_tag] * (len(label_seq.split()) + 2))
-        
 
         
         return tokens_tanl, text_mask_tanl, label_tanl
 
     def construct_prompt_aug(self, tokens, labels):
-        from random import randint
-        # if torch.max(torch.tensor(labels).long()).item() < 0:
-        #     return [], [], []
-        # opt = randint(0, torch.max(torch.tensor(labels).long()).item())
-        # token -> ids
 
-        # entities = [self.label2tag[opt].split('-')[-1].replace('/', ' / ') for opt in range(torch.max(torch.tensor(labels)) + 1)]
         entities = [self.label2tag[opt].replace('-', ' - ').replace('/', ' / ') for opt in range(torch.max(torch.tensor(labels)) + 1)]
         
-        
-        # print(entities)
-        # tokens_aug = 'extract {label} entities for cases :'.format(label=' and '.join(entities)).split()
+
         tokens_aug = ' , '.join(entities).split() + [':']
         text_mask_aug = [0] * len(tokens_aug)
         label_aug = labels
         
         tokens_aug.extend(tokens)
         text_mask_aug.extend([1] * len(tokens))
-        # for token, tag in zip(tokens, labels):
-        #     if tag == opt:
-        #         label_aug.append(opt)
-        #         text_mask_aug.append(1)
-        #     else:
-        #         text_mask_aug.append(0)
+
         
         return tokens_aug, text_mask_aug, label_aug
     
@@ -402,6 +359,27 @@ class EasySampler(FewShotNERDatasetWithRandomSampling):
         print('hello', len(self.samples))
         return len(self.samples)//16
 
+class EasySamplerForSupport(FewShotNERDatasetWithRandomSampling):
+    def __init__(self, filepath, tokenizer, N, K, Q, max_length, ignore_label_id=-1):
+       super(EasySamplerForSupport, self).__init__(filepath, tokenizer, N, K, Q, max_length, ignore_label_id=-1)
+    
+    def __getitem__(self, index):
+        support_idx = [index]
+        target_classes = list(set([ x for idx in support_idx for x in self.samples[idx].get_class_count().keys() ]))
+        # target_classes, support_idx, query_idx = self.sampler.__next__()
+        # add 'O' and make sure 'O' is labeled 0
+        distinct_tags = ['O'] + target_classes
+        # self.tag2label = {tag:idx for idx, tag in enumerate(distinct_tags)}
+        # self.label2tag = {idx:tag for idx, tag in enumerate(distinct_tags)}
+        
+        # support_set = self.__populate__(support_idx)
+        support_set = query_set = self.__populate__(support_idx, savelabeldic=True)
+        return support_set, query_set
+
+    def __len__(self):
+        # print('hello', len(self.samples))
+        return len(self.samples)
+
 class FewShotNERDataset(FewShotNERDatasetWithRandomSampling):
     def __init__(self, filepath, tokenizer, max_length, ignore_label_id=-1, no_shuffle=False):
         if not os.path.exists(filepath):
@@ -548,12 +526,16 @@ def collate_fn_easy(data):
 
 
 def get_loader(filepath, tokenizer, N, K, Q, batch_size, max_length, 
-        num_workers=8, collate_fn=collate_fn, ignore_index=-1, use_sampled_data=True, full_test=False, i2b2flag=False, dataset_name=None, no_shuffle=False):
-    assert (not use_sampled_data) or (not full_test)
+        num_workers=8, collate_fn=collate_fn, ignore_index=-1, use_sampled_data=True, full_test=False, i2b2flag=False, dataset_name=None, no_shuffle=False, is_extra=False):
+    # assert (not use_sampled_data) or (not full_test)
+
+
     if full_test:
         dataset = EasySampler(filepath, tokenizer, N, K, Q, max_length, ignore_label_id=ignore_index)
     elif not use_sampled_data:
         dataset = FewShotNERDatasetWithRandomSampling(filepath, tokenizer, N, K, Q, max_length, ignore_label_id=ignore_index, i2b2flag=i2b2flag, dataset_name=dataset_name, no_shuffle=no_shuffle)
+    elif is_extra:
+        dataset = EasySamplerForSupport(filepath, tokenizer, N, K, Q, max_length, ignore_label_id=ignore_index)
     else:
         dataset = FewShotNERDataset(filepath, tokenizer, max_length, ignore_label_id=ignore_index, no_shuffle=no_shuffle)
     
