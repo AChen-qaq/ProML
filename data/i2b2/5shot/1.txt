@@ -1,0 +1,701 @@
+266	GATE-street
+paxton	GATE-street
+terrace	GATE-street
+
+t	O
+:	O
+07/20/80	GATE-date
+
+his	O
+last	O
+hematocrit	O
+in	O
+2080	GATE-date
+was	O
+at	O
+38	O
+,	O
+normal	O
+mcv	O
+.	O
+
+saint	GATE-hospital
+vincent	GATE-hospital
+hospital	GATE-hospital
+
+resident	O
+on	O
+3/28/89	GATE-date
+.	O
+
+wanda	GATE-doctor
+koontz	GATE-doctor
+,	O
+m	O
+.	O
+
+jung	GATE-doctor
+and	O
+has	O
+a	O
+followup	O
+appointment	O
+with	O
+me	O
+for	O
+comprehensive	O
+exam	O
+in	O
+one	O
+to	O
+two	O
+months	O
+.	O
+
+he	O
+has	O
+residual	O
+right	O
+shoulder	O
+pain	O
+after	O
+a	O
+fall	O
+in	O
+dec	GATE-date
+2094	GATE-date
+which	O
+was	O
+significantly	O
+improved	O
+by	O
+steroid	O
+injections	O
+.	O
+
+he	O
+is	O
+61	GATE-age
+years	O
+old	O
+with	O
+previous	O
+history	O
+of	O
+diabetes	O
+,	O
+
+xayavong	GATE-patient
+is	O
+a	O
+62	GATE-age
+year	O
+old	O
+man	O
+with	O
+a	O
+history	O
+of	O
+cad	O
+(s/p	O
+stemi	O
+and	O
+multiple	O
+stents)	O
+,	O
+chf	O
+(s/p	O
+biv	O
+icd	O
+,	O
+class	O
+d	O
+and	O
+stage	O
+iii)	O
+,	O
+dm	O
+,	O
+and	O
+cri	O
+who	O
+was	O
+admitted	O
+for	O
+tailored	O
+therapy	O
+after	O
+a	O
+routine	O
+rhc	O
+demonstrated	O
+elevated	O
+filling	O
+pressures	O
+.	O
+
+(729)	GATE-phone number
+481-3539	GATE-phone number
+11/18/96	GATE-date
+
+vernon	GATE-doctor
+ewing	GATE-doctor
+,	O
+jmh	GATE-hospital
+internal	O
+medicine	O
+intern	O
+
+jacqueline	GATE-doctor
+lam	GATE-doctor
+.	O
+
+max	GATE-doctor
+uriarte	GATE-doctor
+,	O
+m	O
+.	O
+
+the	O
+patient	O
+was	O
+transferred	O
+to	O
+the	O
+bailey	GATE-hospital
+memorial	GATE-hospital
+hospital	GATE-hospital
+emergency	O
+department	O
+for	O
+further	O
+evaluation	O
+and	O
+
+hb79	GATE-username
+d	O
+:	O
+11/22/82	GATE-date
+
+mr	O
+#	O
+:	O
+2152363	GATE-medical record
+
+pcp	O
+:	O
+leon	GATE-doctor
+fontenot	GATE-doctor
+,	O
+md	O
+of	O
+elkhorn	GATE-hospital
+valley	GATE-hospital
+
+the	O
+barton	GATE-hospital
+memorial	GATE-hospital
+hospital	GATE-hospital
+where	O
+coronary	O
+angiography	O
+
+mu11	GATE-username
+d	O
+:	O
+05/25/86	GATE-date
+
+lives	O
+with	O
+wife	O
+in	O
+gardnerville	GATE-city
+ranchos	GATE-city
+,	O
+ga	GATE-state
+.	O
+
+works	O
+in	O
+shoe	GATE-profession
+repair	GATE-profession
+.	O
+
+hpi	O
+:	O
+the	O
+patient	O
+is	O
+a	O
+55	GATE-age
+year	O
+old	O
+male	O
+with	O
+a	O
+past	O
+medical	O
+history	O
+significant	O
+for	O
+chronic	O
+renal	O
+failure	O
+(secondary	O
+to	O
+diabetes	O
+&	O
+hypertension)	O
+and	O
+gastrointestinal	O
+mucormycosis	O
+who	O
+was	O
+recently	O
+admitted	O
+for	O
+a	O
+clotted	O
+avf	O
+,	O
+s/p	O
+thrombectomy	O
+.	O
+
+jimenez	GATE-patient
+is	O
+a	O
+78	GATE-age
+yo	O
+male	O
+with	O
+h/o	O
+hodgkin&#8217;s	O
+dz	O
+s/p	O
+chemo	O
+,	O
+t2m	O
+,	O
+htn	O
+,	O
+aaa	O
+,	O
+chf	O
+(last	O
+tte	O
+2086	GATE-date
+with	O
+lvef	O
+50%	O
+,	O
+rvsp	O
+45)	O
+,	O
+a	O
+fib	O
+on	O
+coumadin	O
+,	O
+recently	O
+discharged	O
+after	O
+prolonged	O
+hospital	O
+stay	O
+for	O
+pna	O
+&amp;	O
+complicated	O
+pleural	O
+effusion	O
+requiring	O
+chest	O
+tube	O
+placement	O
+,	O
+now	O
+returns	O
+from	O
+rehab	O
+with	O
+20	O
+lb	O
+wt	O
+gain	O
+since	O
+discharge	O
+on	O
+3/09	GATE-date
+&amp;	O
+7	O
+.	O
+
+65	GATE-street
+indian	GATE-street
+rock	GATE-street
+road	GATE-street
+
+fh	O
+:	O
+mother	O
+lived	O
+to	O
+90	GATE-age
+.	O
+
+patient	O
+:	O
+munoz	GATE-patient
+,	GATE-patient
+katie	GATE-patient
+
+accession	O
+#	O
+6934p2380	GATE-medical record
+
+mrn#	O
+75322175	GATE-medical record
+
+08	GATE-street
+doncaster	GATE-street
+drive	GATE-street
+
+-	O
+stroke	O
+consult	O
+service	O
+to	O
+follow	O
+(pager	O
+90395	GATE-phone number
+)	O
+
+asmara	GATE-city
+,	O
+pa	GATE-state
+96931	GATE-zip code
+
+name	O
+:	O
+curtis	GATE-patient
+,	GATE-patient
+om	GATE-patient
+
+the	O
+patient	O
+is	O
+married	O
+and	O
+lives	O
+in	O
+wilkes-barre	GATE-city
+,	O
+pa	GATE-state
+with	O
+his	O
+wife	O
+.	O
+
+milbank	GATE-city
+,	O
+mn	GATE-state
+49757	GATE-zip code
+
+he	O
+has	O
+continued	O
+actively	O
+managing	GATE-profession
+production	GATE-profession
+and	O
+is	O
+planning	O
+a	O
+trip	O
+to	O
+italy	GATE-country
+next	O
+month	O
+.	O
+
+uriah	GATE-patient
+lara	GATE-patient
+
+lmc	GATE-hospital
+#	O
+100-57-08	GATE-medical record
+
+,	O
+pcp	O
+,	O
+pune	GATE-city
+,	O
+me	GATE-state
+
+hcp	O
+:	O
+quanita-ella	GATE-patient
+paul-doyle	GATE-patient
+(daughter)	O
+,	O
+:	O
+448-876-4285	GATE-phone number
+
+mrn	O
+:	O
+7682941	GATE-medical record
+
+(179)	GATE-phone number
+732-8159	GATE-phone number
+06/20/74	GATE-date
+
+charles	GATE-doctor
+wallace	GATE-doctor
+mdp	O
+73703	GATE-phone number
+
+escription	O
+document	O
+:	O
+3-2644464	GATE-ID number
+iffocus	O
+
+cozad	GATE-city
+,	O
+ok	GATE-state
+53952	GATE-zip code
+
+ye96	GATE-username
+
+sh	GATE-doctor
+/	O
+truitt	GATE-doctor
+89-05167655	GATE-ID number
+.	O
+
+communications	GATE-profession
+senior	GATE-profession
+manager	GATE-profession
+,	O
+marketing	GATE-profession
+,	O
+worked	O
+for	O
+brinker	GATE-organization
+international	GATE-organization
+,	O
+now	O
+facebook	GATE-organization
+.	O
+
+___________________________________	O
+rj446/0820	GATE-ID number
+
+escription	O
+document	O
+:	O
+6-2359741	GATE-ID number
+emssten	O
+tel	O
+
+occupation-was	O
+a	O
+vocational	GATE-profession
+instructor	GATE-profession
+
+6250	GATE-street
+madera	GATE-street
+circle	GATE-street
+potts	GATE-patient
+,	GATE-patient
+william	GATE-patient
+
+college	GATE-city
+station	GATE-city
+,	O
+nc	GATE-state
+22169	GATE-zip code
+
+escription	O
+document	O
+:	O
+0-9416184	GATE-ID number
+il	GATE-doctor
+
+871	GATE-street
+westerdale	GATE-street
+drive	GATE-street
+werner	GATE-patient
+,	GATE-patient
+nancy	GATE-patient
+
+sochx	O
+:	O
+married	O
+,	O
+originally	O
+from	O
+nicaragua	GATE-country
+,	O
+lives	O
+in	O
+citrus	GATE-city
+ridge	GATE-city
+now	O
+.	O
+
+dz0	GATE-username
+
+,	O
+208	GATE-street
+pheasant	GATE-street
+lane	GATE-street
+,	O
+platteville	GATE-city
+,	O
+hi	GATE-state
+79812	GATE-zip code
+
+retired	O
+mathematician	GATE-profession
+at	O
+vassar	GATE-organization
+.	O
+
+the	O
+mental	O
+state	O
+is	O
+normal;	O
+he	O
+speaks	O
+spanish	GATE-country
+and	O
+broken	O
+english	O
+.	O
+
+to	O
+briggs	GATE-organization
+stratton	GATE-organization
+and	O
+dropped	O
+to	O
+270	O
+lb	O
+.	O
+
+vh79	GATE-username
+
+male	O
+columbian	GATE-country
+speaking	O
+(hospital	O
+interpreter	O
+present)	O
+presents	O
+for	O
+follow	O
+up	O
+.	O
+
+amputation	O
+in	O
+the	O
+past	O
+in	O
+eritrea	GATE-country
+.	O
+
+the	O
+orginal	O
+is	O
+stored	O
+on	O
+the	O
+brightpoint	GATE-organization
+server	O
+at	O
+columbia	GATE-hospital
+kingwood	GATE-hospital
+medical	GATE-hospital
+center	GATE-hospital
+and	O
+in	O
+print	O
+in	O
+the	O
+patient's	O
+ckmc	GATE-hospital
+paper	O
+record	O
+.	O
+
+org	GATE-email
+
+rvl	O
+0049eo/46	GATE-device
+.	O
+
+ral	O
+5167dh/20	GATE-device
+serial	O
+#	O
+sq462162	GATE-device
+.	O
+
+interrogation	O
+today	O
+of	O
+his	O
+medtronic	O
+kappa	O
+qq	GATE-device
+626	GATE-device
+pacemaker	O
+reveals	O
+that	O
+his	O
+underlying	O
+rhythm	O
+is	O
+sinus	O
+tachycardia	O
+with	O
+intact	O
+av	O
+conduction	O
+.	O
+
+(385)	GATE-fax
+031-7905	GATE-fax
+
+interrogation	O
+today	O
+of	O
+his	O
+medtronic	O
+kappa	O
+cte	GATE-device
+226	GATE-device
+pacemaker	O
+reveals	O
+that	O
+his	O
+underlying	O
+rhythm	O
+is	O
+sinus	O
+tachycardia	O
+with	O
+intact	O
+av	O
+conduction	O
+.	O
+
+e-mail	O
+:	O
+iparedes@oachosp	GATE-email
+.	GATE-email
+

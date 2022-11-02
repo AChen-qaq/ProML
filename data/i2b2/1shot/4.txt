@@ -1,0 +1,168 @@
+history	O
+of	O
+present	O
+illness	O
+:	O
+this	O
+61	GATE-age
+-year-old	O
+ambidextrous	O
+female	O
+is	O
+referred	O
+by	O
+dr	O
+.	O
+
+479	GATE-street
+clairmoor	GATE-street
+drive	GATE-street
+
+ds	O
+:	O
+01/10/93	GATE-date
+
+,	O
+lmc	GATE-hospital
+
+patient	O
+:	O
+walton	GATE-patient
+,	GATE-patient
+levi	GATE-patient
+
+ivory	GATE-doctor
+,	O
+cardiology	O
+
+former	O
+communications	GATE-profession
+manager	GATE-profession
+;	O
+currently	O
+works	O
+part	O
+time	O
+in	O
+securities	GATE-profession
+
+she	O
+is	O
+very	O
+happily	O
+married	O
+and	O
+lives	O
+in	O
+polson	GATE-city
+,	O
+va	GATE-state
+half	O
+the	O
+year	O
+.	O
+
+xavier	GATE-doctor
+youmans	GATE-doctor
+,	O
+md	O
+pager	O
+#	O
+24791	GATE-phone number
+
+interrogation	O
+today	O
+of	O
+his	O
+medtronic	O
+kappa	O
+cte	GATE-device
+226	GATE-device
+pacemaker	O
+reveals	O
+that	O
+his	O
+underlying	O
+rhythm	O
+is	O
+sinus	O
+tachycardia	O
+with	O
+intact	O
+av	O
+conduction	O
+.	O
+
+patient	O
+name	O
+:	O
+umphrey	GATE-patient
+,	GATE-patient
+frankie	GATE-patient
+;	O
+mrn	O
+:	O
+0942207	GATE-medical record
+
+escription	O
+document	O
+:	O
+3-6567539	GATE-ID number
+iffocus	O
+
+fg9	GATE-username
+d	O
+:	O
+12/31/82	GATE-date
+
+louisa	GATE-city
+,	O
+ms	GATE-state
+59817	GATE-zip code
+37199514	GATE-medical record
+
+likes	O
+the	O
+library	GATE-organization
+.	O
+
+since	O
+he	O
+has	O
+returned	O
+to	O
+america	GATE-country
+several	O
+weeks	O
+ago	O
+,	O
+he	O
+has	O
+only	O
+had	O
+one	O
+episode	O
+of	O
+his	O
+chest	O
+discomfort	O
+,	O
+which	O
+occurred	O
+when	O
+he	O
+was	O
+getting	O
+rushed	O
+to	O
+come	O
+to	O
+the	O
+clinic	O
+.	O
+
+(385)	GATE-fax
+031-7905	GATE-fax
+
+org	GATE-email
+

@@ -1,0 +1,729 @@
+roger	GATE-doctor
+l	GATE-doctor
+.	GATE-doctor
+
+dating	O
+monogamously	O
+laura	GATE-patient
+23	GATE-date
+greater	O
+then	O
+.	O
+
+he	O
+developed	O
+recurrent	O
+chest	O
+discomfort	O
+in	O
+12/2159	GATE-date
+,	O
+and	O
+he	O
+underwent	O
+cardiac	O
+catheterization	O
+during	O
+which	O
+time	O
+he	O
+was	O
+found	O
+to	O
+have	O
+an	O
+80%	O
+mid	O
+lad	O
+lesion	O
+distal	O
+to	O
+his	O
+prior	O
+stents	O
+as	O
+well	O
+as	O
+a	O
+30%	O
+proximal	O
+rca	O
+mid	O
+pda	O
+stenosis	O
+.	O
+
+he	O
+had	O
+an	O
+ett	O
+per	O
+patient	O
+report	O
+in	O
+georgia	GATE-country
+which	O
+was	O
+neg	O
+for	O
+ischemia	O
+4	O
+years	O
+ago	O
+.	O
+
+marvinyandell	GATE-patient
+,	GATE-patient
+grace	GATE-patient
+904-68-07-1	GATE-medical record
+visit	O
+date	O
+:	O
+08/06/96	GATE-date
+
+06/14/2132	GATE-date
+0	O
+.	O
+
+robles	GATE-doctor
+for	O
+initial	O
+evaluation	O
+.	O
+
+m-alb/creat	O
+ratio	O
+10/11/2064	GATE-date
+8	O
+.	O
+
+retired	O
+landscape	GATE-profession
+architect	GATE-profession
+.	O
+
+hb79	GATE-username
+d	O
+:	O
+11/22/82	GATE-date
+
+escription	O
+document	O
+:	O
+9-9294537	GATE-ID number
+rffocus	O
+
+dz0	GATE-username
+
+he	O
+is	O
+an	O
+67	GATE-age
+-year-old	O
+honduran	GATE-country
+man	O
+with	O
+a	O
+history	O
+of	O
+diabetes	O
+mellitus	O
+and	O
+htn	O
+.	O
+
+sioux	GATE-city
+city	GATE-city
+,	O
+fl	GATE-state
+76546	GATE-zip code
+
+743	GATE-street
+gilson	GATE-street
+road	GATE-street
+
+cdh	GATE-hospital
+#	O
+810	GATE-medical record
+86	GATE-medical record
+43	GATE-medical record
+7	GATE-medical record
+
+she	O
+does	O
+have	O
+a	O
+strong	O
+family	O
+history	O
+of	O
+coronary	O
+artery	O
+disease	O
+with	O
+a	O
+brother	O
+who	O
+had	O
+several	O
+myocardial	O
+infarctions	O
+and	O
+died	O
+at	O
+the	O
+age	O
+of	O
+48	GATE-age
+of	O
+an	O
+mi	O
+.	O
+
+follow	O
+up	O
+with	O
+dr	O
+bonnie	GATE-doctor
+eaves	GATE-doctor
+.	O
+
+quiring	GATE-doctor
+for	O
+endovascular	O
+intervention	O
+.	O
+
+patient	O
+name	O
+:	O
+flaherty	GATE-patient
+,	GATE-patient
+xavier	GATE-patient
+;	O
+mrn	O
+:	O
+1935081	GATE-medical record
+
+carter	GATE-doctor
+k	GATE-doctor
+.	GATE-doctor
+
+impression	O
+:	O
+this	O
+is	O
+a	O
+64	GATE-age
+year	O
+old	O
+woman	O
+with	O
+a	O
+history	O
+of	O
+congestive	O
+heart	O
+
+amador	GATE-patient
+jarvis	GATE-patient
+comes	O
+for	O
+an	O
+annual	O
+visit	O
+and	O
+physical	O
+exam	O
+,	O
+and	O
+to	O
+follow-up	O
+on	O
+his	O
+diabetes	O
+,	O
+hypertension	O
+and	O
+elevated	O
+serum	O
+creatinine	O
+
+nicholas	GATE-patient
+xavier	GATE-patient
+
+bs	O
+was	O
+191	O
+in	O
+11/1/69	GATE-date
+and	O
+was	O
+in	O
+similar	O
+range	O
+during	O
+his	O
+hospitalization	O
+in	O
+montreal	GATE-hospital
+medical	GATE-hospital
+.	O
+
+mullins	GATE-patient
+,	GATE-patient
+dolores	GATE-patient
+u	GATE-patient
+728-41-92-0	GATE-medical record
+visit	O
+date	O
+:	O
+01/24/73	GATE-date
+
+___________________________________	O
+oh527/2519	GATE-ID number
+
+cc	O
+57	GATE-age
+yo	O
+with	O
+multiple	O
+medical	O
+,	O
+psychiatric	O
+problems	O
+admitted	O
+with	O
+recurrent	O
+sbo	O
+and	O
+acute	O
+renal	O
+failure	O
+
+andreea	GATE-doctor
+marquez	GATE-doctor
+rn	O
+,	O
+mn	O
+#	O
+1-3051	GATE-phone number
+
+wagner	GATE-patient
+,	GATE-patient
+lonnie	GATE-patient
+097-87-37-2	GATE-medical record
+visit	O
+date	O
+:	O
+07/29/65	GATE-date
+
+jellico	GATE-hospital
+emergency	O
+dept	O
+visit	O
+
+assessment	O
+:	O
+51	GATE-age
+yo	O
+woman	O
+with	O
+diabetes	O
+,	O
+hypertension	O
+,	O
+cri	O
+from	O
+hypertension/diabetic	O
+nephropathy	O
+likely	O
+.	O
+
+8	GATE-street
+riverview	GATE-street
+avenue	GATE-street
+,	O
+suite	O
+185	O
+
+54	GATE-age
+y/o	O
+spanish	O
+speaking	O
+male	O
+with	O
+htn	O
+,	O
+hl	O
+presents	O
+to	O
+pnc	GATE-hospital
+after	O
+syncopal	O
+episode	O
+2	O
+days	O
+ago	O
+and	O
+was	O
+found	O
+to	O
+have	O
+as	O
+at	O
+osh	O
+.	O
+
+pager	O
+48249	GATE-phone number
+
+sp79	GATE-username
+
+patient	O
+name	O
+:	O
+jorgenson	GATE-patient
+,	GATE-patient
+vivianlee	GATE-patient
+[	O
+47190847	GATE-medical record
+(	O
+jmh	GATE-hospital
+)	O
+]	O
+date	O
+of	O
+visit	O
+:	O
+03/17/2078	GATE-date
+
+wheatland	GATE-hospital
+memorial	GATE-hospital
+nursing	GATE-hospital
+home	GATE-hospital
+/	O
+bangdung	GATE-city
+office	O
+
+239	GATE-street
+gilson	GATE-street
+road	GATE-street
+
+the	O
+orginal	O
+is	O
+stored	O
+on	O
+the	O
+brightpoint	GATE-organization
+server	O
+at	O
+columbia	GATE-hospital
+kingwood	GATE-hospital
+medical	GATE-hospital
+center	GATE-hospital
+and	O
+in	O
+print	O
+in	O
+the	O
+patient's	O
+ckmc	GATE-hospital
+paper	O
+record	O
+.	O
+
+lot	O
+#	O
+gl735lm	GATE-ID number
+
+lives	O
+with	O
+friend	O
+in	O
+zebulon	GATE-city
+,	O
+has	O
+not	O
+worked	O
+for	O
+many	O
+years	O
+
+68626	GATE-phone number
+
+ne00	GATE-username
+
+427	GATE-street
+ohio	GATE-street
+street	GATE-street
+chapman	GATE-patient
+,	GATE-patient
+noor	GATE-patient
+
+thelma	GATE-doctor
+morrison	GATE-doctor
+,	O
+renal	O
+fellow	O
+,	O
+pager	O
+96794	GATE-phone number
+
+contact	O
+:	O
+wife	O
+,	O
+tammy	GATE-patient
+quinn	GATE-patient
+746-313-1881	GATE-phone number
+
+works	O
+as	O
+patternmaker	GATE-profession
+at	O
+imn	GATE-organization
+.	O
+
+social	O
+history	O
+:	O
+he	O
+is	O
+a	O
+long	O
+retired	O
+news	GATE-profession
+writer	GATE-profession
+with	O
+a	O
+heavy	O
+smoking	O
+history	O
+.	O
+
+he	O
+went	O
+to	O
+the	O
+hch	GATE-hospital
+at	O
+easton	GATE-city
+2	O
+days	O
+later	O
+,	O
+his	O
+bp	O
+was	O
+still	O
+elevated	O
+,	O
+and	O
+they	O
+started	O
+him	O
+on	O
+clonidine	O
+.	O
+
+he	O
+has	O
+remote	O
+travel	O
+hx	O
+to	O
+the	O
+rockefeller	O
+centre	O
+,	O
+more	O
+recent	O
+global	O
+travel	O
+(	O
+fernley	GATE-city
+,	O
+cartersville	GATE-city
+,	O
+iceland	GATE-country
+)	O
+,	O
+and	O
+frequent	O
+travel	O
+to	O
+muscat	GATE-city
+area	O
+.	O
+
+___________________________________	O
+rj446/0820	GATE-ID number
+
+vernon	GATE-city
+,	O
+me	GATE-state
+27525	GATE-zip code
+
+sioux	GATE-city
+city	GATE-city
+,	O
+fl	GATE-state
+76546	GATE-zip code
+47190847	GATE-medical record
+
+78	GATE-street
+parkhurst	GATE-street
+drive	GATE-street
+
+white	GATE-city
+hall	GATE-city
+,	O
+mn	GATE-state
+76715	GATE-zip code
+65856594	GATE-medical record
+
+escription	O
+document	O
+:	O
+8-7850722	GATE-ID number
+emssten	O
+tel	O
+
+has	O
+daughter	O
+in	O
+the	O
+area	O
+(a	O
+surgeon	GATE-profession
+)	O
+.	O
+
+he	O
+immigrated	O
+to	O
+america	GATE-country
+about	O
+a	O
+year	O
+or	O
+so	O
+ago	O
+.	O
+
+ti56	GATE-username
+
+married	O
+,	O
+glazier	GATE-profession
+,	O
+3	O
+grown	O
+adult	O
+children	O
+
+the	O
+pt's	O
+daughter	O
+in	O
+new	GATE-state
+york	GATE-state
+has	O
+agreed	O
+to	O
+take	O
+care	O
+of	O
+him	O
+.	O
+
+amputation	O
+in	O
+the	O
+past	O
+in	O
+eritrea	GATE-country
+.	O
+
+the	O
+patient	O
+lives	O
+with	O
+a	O
+friend	O
+who	O
+works	O
+at	O
+marble	GATE-organization
+slab	GATE-organization
+creamery	GATE-organization
+.	O
+
+communications	GATE-profession
+senior	GATE-profession
+manager	GATE-profession
+,	O
+marketing	GATE-profession
+,	O
+worked	O
+for	O
+brinker	GATE-organization
+international	GATE-organization
+,	O
+now	O
+facebook	GATE-organization
+.	O
+
+interrogation	O
+today	O
+of	O
+his	O
+medtronic	O
+kappa	O
+qq	GATE-device
+626	GATE-device
+pacemaker	O
+reveals	O
+that	O
+his	O
+underlying	O
+rhythm	O
+is	O
+sinus	O
+tachycardia	O
+with	O
+intact	O
+av	O
+conduction	O
+.	O
+
+26822	GATE-zip code
+
+rvl	O
+0049eo/46	GATE-device
+.	O
+
+ral	O
+5167dh/20	GATE-device
+serial	O
+#	O
+sq462162	GATE-device
+.	O
+
+serial	O
+#	O
+lx39426	GATE-device
+.	O
+
+(385)	GATE-fax
+031-7905	GATE-fax
+
+e-mail	O
+:	O
+iparedes@oachosp	GATE-email
+.	GATE-email
+
+org	GATE-email
+

@@ -1,0 +1,35 @@
+milan	GATE-location
+1996-08-30	O
+
+scoreboard	O
+in	O
+the	O
+world	GATE-miscellaneous
+series	GATE-miscellaneous
+
+livshits	GATE-person
+'s	O
+words	O
+are	O
+an	O
+attempt	O
+to	O
+put	O
+pressure	O
+on	O
+the	O
+company	O
+.	O
+"	O
+
+queen	GATE-organization
+of	GATE-organization
+south	GATE-organization
+3	O
+2	O
+0	O
+1	O
+5	O
+4	O
+6	O
+

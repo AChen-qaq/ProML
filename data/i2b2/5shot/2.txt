@@ -1,0 +1,762 @@
+utterback	GATE-doctor
+)	O
+
+fasting	O
+labs	O
+on	O
+03/09/2130	GATE-date
+when	O
+she	O
+sees	O
+dr	O
+.	O
+
+record	O
+date	O
+:	O
+2090-11-21	GATE-date
+
+he	O
+increased	O
+beta	O
+blocker	O
+and	O
+she	O
+developed	O
+what	O
+sounds	O
+like	O
+heart	O
+block	O
+in	O
+va	GATE-state
+.	O
+
+17	GATE-date
+may	GATE-date
+2155	GATE-date
+
+date	O
+of	O
+admission	O
+:	O
+09	GATE-date
+september	GATE-date
+2083	GATE-date
+
+name	O
+:	O
+upham	GATE-patient
+,	GATE-patient
+zelda	GATE-patient
+
+mrn	O
+:	O
+72841920	GATE-medical record
+
+04/14/94	GATE-date
+
+today	O
+was	O
+sent	O
+to	O
+lch	GATE-hospital
+given	O
+concern	O
+for	O
+his	O
+left	O
+upper	O
+extremity	O
+as	O
+well	O
+as	O
+bilateral	O
+low	O
+extremity	O
+swelling	O
+and	O
+wt	O
+gain	O
+with	O
+concern	O
+for	O
+possible	O
+chf	O
+flare	O
+.	O
+
+(426)	GATE-phone number
+819-5183	GATE-phone number
+10/26/94	GATE-date
+
+dear	O
+robert	GATE-doctor
+,	O
+
+orville	GATE-doctor
+ness	GATE-doctor
+.	O
+
+6)	O
+renal	O
+:	O
+followed	O
+by	O
+dr	O
+esparza	GATE-doctor
+-no	O
+current	O
+issues	O
+,	O
+last	O
+bun/cr	O
+:	O
+82/1	O
+.	O
+
+therapy	O
+rendered/course	O
+in	O
+ed	O
+:	O
+the	O
+patient	O
+is	O
+a	O
+46	GATE-age
+year	O
+old	O
+male	O
+
+escription	O
+document	O
+:	O
+6-0689198	GATE-ID number
+bffocus	O
+
+20	GATE-age
+,	O
+hypercholesterolemia	O
+and	O
+family	O
+history	O
+in	O
+that	O
+her	O
+father	O
+
+re	O
+:	O
+heath	GATE-patient
+,	GATE-patient
+quinten	GATE-patient
+m	GATE-patient
+
+minerva	GATE-city
+,	O
+tn	GATE-state
+41694	GATE-zip code
+
+history	O
+of	O
+present	O
+illness	O
+:	O
+this	O
+is	O
+a	O
+50	GATE-age
+-year-old	O
+female	O
+with	O
+
+quincey	GATE-doctor
+harmon	GATE-doctor
+,	O
+md	O
+
+64	GATE-age
+y	O
+.	O
+
+58	GATE-age
+-year-old	O
+chadian	GATE-country
+gentleman	O
+with	O
+multiple	O
+medical	O
+problems	O
+including	O
+dm	O
+,	O
+htn	O
+and	O
+esrf	O
+on	O
+dialysis	O
+.	O
+
+75	GATE-age
+-year-old	O
+woman	O
+with	O
+a	O
+history	O
+of	O
+hypertension	O
+,	O
+diabetes	O
+,	O
+and	O
+hypercholesterolemia	O
+and	O
+paf	O
+with	O
+a	O
+prior	O
+stroke	O
+(	O
+2067	GATE-date
+)	O
+who	O
+subsequently	O
+was	O
+admitted	O
+to	O
+the	O
+och	GATE-hospital
+again	O
+for	O
+sdh	O
+with	O
+supratherapeutic	O
+inr	O
+in	O
+2068	GATE-date
+.	O
+
+the	O
+pt's	O
+daughter	O
+in	O
+new	GATE-state
+york	GATE-state
+has	O
+agreed	O
+to	O
+take	O
+care	O
+of	O
+him	O
+.	O
+
+she	O
+is	O
+a	O
+professional	O
+tool	GATE-profession
+maker	GATE-profession
+.	O
+
+evans	GATE-hospital
+memorial	GATE-hospital
+hospital	GATE-hospital
+
+hpi	O
+:	O
+73	GATE-age
+yo	O
+black	O
+woman	O
+with	O
+h/o	O
+htn	O
+and	O
+recurrent	O
+non-malignant	O
+axillary	O
+lymphadenopathy	O
+,	O
+newly	O
+diagnosed	O
+with	O
+hocm	O
+in	O
+the	O
+setting	O
+of	O
+fatigue	O
+,	O
+weight	O
+loss	O
+and	O
+hypercalcemia	O
+concerning	O
+for	O
+sarcoidosis	O
+during	O
+a	O
+work-up	O
+at	O
+her	O
+last	O
+admission	O
+to	O
+mediquik	GATE-hospital
+on	O
+6/2	GATE-date
+-	O
+6/20/97	GATE-date
+.	O
+
+contact	O
+:	O
+debra	GATE-patient
+jaquez	GATE-patient
+(daughter)	O
+:	O
+901-063-0839	GATE-phone number
+
+pt	O
+:	O
+werner	GATE-patient
+,	GATE-patient
+brian	GATE-patient
+u	GATE-patient
+
+internal	O
+medicine	O
+vance	GATE-patient
+,	GATE-patient
+jennifer	GATE-patient
+
+the	O
+patient	O
+was	O
+transferred	O
+to	O
+the	O
+bailey	GATE-hospital
+memorial	GATE-hospital
+hospital	GATE-hospital
+emergency	O
+department	O
+for	O
+further	O
+evaluation	O
+and	O
+
+decatur	GATE-city
+,	O
+wi	GATE-state
+33955	GATE-zip code
+
+pg	O
+68283	GATE-phone number
+
+she	O
+follows	O
+a	O
+diabetic	O
+diet	O
+(avoids	O
+sweets)	O
+,	O
+gets	O
+no	O
+regular	O
+exercise	O
+,	O
+but	O
+works	O
+in	O
+electrical	GATE-profession
+and	GATE-profession
+avionics	GATE-profession
+mechanics	GATE-profession
+so	O
+does	O
+have	O
+physical	O
+activity	O
+during	O
+the	O
+day	O
+.	O
+
+wheatland	GATE-hospital
+memorial	GATE-hospital
+nursing	GATE-hospital
+home	GATE-hospital
+/	O
+bangdung	GATE-city
+office	O
+
+giovanni	GATE-doctor
+huang	GATE-doctor
+,	O
+md	O
+,	O
+pgy-1	O
+(pager	O
+76567	GATE-phone number
+)	O
+
+social	O
+history	O
+:	O
+retired	O
+network	GATE-profession
+operator	GATE-profession
+/	O
+craftperson	GATE-profession
+,	O
+lives	O
+alone	O
+in	O
+private	O
+home	O
+near	O
+wife	O
+and	O
+daughters	O
+.	O
+
+44	GATE-street
+brigham	GATE-street
+st	GATE-street
+
+157	GATE-street
+peterborough	GATE-street
+place	GATE-street
+kim	GATE-patient
+jr	GATE-patient
+,	GATE-patient
+douglas	GATE-patient
+
+sh	O
+:	O
+single	O
+,	O
+ground	GATE-profession
+transit	GATE-profession
+operators	GATE-profession
+supervisor	GATE-profession
+at	O
+hasbro	GATE-organization
+.	O
+
+patient	O
+name	O
+:	O
+flaherty	GATE-patient
+,	GATE-patient
+xavier	GATE-patient
+;	O
+mrn	O
+:	O
+1935081	GATE-medical record
+
+accession	O
+#	O
+3194s62727	GATE-medical record
+
+quinten	GATE-patient
+heath	GATE-patient
+,	O
+976	GATE-street
+clinton	GATE-street
+street	GATE-street
+,	O
+gardnerville	GATE-city
+ranchos	GATE-city
+,	O
+ga	GATE-state
+79269	GATE-zip code
+
+hyderabad	GATE-city
+,	O
+wi	GATE-state
+62297	GATE-zip code
+76324418	GATE-medical record
+
+after	O
+liberation	O
+,	O
+she	O
+came	O
+to	O
+algeria	GATE-country
+where	O
+she	O
+met	O
+her	O
+husband	O
+.	O
+
+chickasha	GATE-city
+,	O
+nc	GATE-state
+75156	GATE-zip code
+
+medical	O
+record	O
+number	O
+:	O
+4698877	GATE-medical record
+isabella	GATE-patient
+t	GATE-patient
+.	GATE-patient
+
+the	O
+patient's	O
+grand-nephew	O
+is	O
+translating	O
+,	O
+initially	O
+,	O
+then	O
+joined	O
+by	O
+dutch	GATE-country
+interpreter;	O
+history	O
+is	O
+challenging	O
+to	O
+obtain	O
+.	O
+
+81	GATE-street
+clergy	GATE-street
+street	GATE-street
+
+55	GATE-age
+y/o	O
+columbian	GATE-country
+male	O
+with	O
+a	O
+history	O
+of	O
+htn	O
+,	O
+hyperlipidemia	O
+,	O
+severe	O
+as	O
+s/p	O
+avr	O
+(st	O
+.	O
+
+-	O
+stroke	O
+consult	O
+service	O
+to	O
+follow	O
+(pager	O
+90395	GATE-phone number
+)	O
+
+ci	GATE-ID number
+:	GATE-ID number
+100417	GATE-ID number
+:	GATE-ID number
+7153	GATE-ID number
+
+at	O
+osh	O
+in	O
+columbia	GATE-country
+:	O
+lvh	O
+,	O
+nl	O
+fxn	O
+,	O
+av	O
+calcified	O
+.	O
+
+escription	O
+document	O
+:	O
+5-0405500	GATE-ID number
+bffocus	O
+
+fb25	GATE-username
+
+tx12	GATE-username
+
+escription	O
+document	O
+:	O
+1-1843613	GATE-ID number
+bffocus	O
+
+08	GATE-street
+doncaster	GATE-street
+drive	GATE-street
+
+escription	O
+document	O
+:	O
+0-50096032	GATE-ID number
+bffocus	O
+
+la06	GATE-username
+
+fg9	GATE-username
+
+rs40	GATE-username
+
+formerly	O
+at	O
+brightpoint	GATE-organization
+.	O
+
+on	O
+the	O
+day	O
+prior	O
+to	O
+admission	O
+,	O
+the	O
+pt	O
+walked	O
+to	O
+procter	GATE-organization
+gamble	GATE-organization
+(2	O
+blocks	O
+from	O
+house)	O
+and	O
+fell	O
+twice	O
+.	O
+
+grew	O
+up	O
+brownstown	GATE-city
+,	O
+bs	O
+math	O
+brown	GATE-organization
+u	GATE-organization
+.	GATE-organization
+
+she	O
+works	O
+as	O
+a	O
+senior	GATE-profession
+manager	GATE-profession
+of	GATE-profession
+broadcasting	GATE-profession
+at	O
+giant	GATE-organization
+food	GATE-organization
+in	O
+albemarle	GATE-city
+.	O
+
+rvl	O
+0049eo/46	GATE-device
+.	O
+
+e-mail	O
+:	O
+iparedes@oachosp	GATE-email
+.	GATE-email
+
+ral	O
+5167dh/20	GATE-device
+serial	O
+#	O
+sq462162	GATE-device
+.	O
+
+interrogation	O
+today	O
+of	O
+his	O
+medtronic	O
+kappa	O
+qq	GATE-device
+626	GATE-device
+pacemaker	O
+reveals	O
+that	O
+his	O
+underlying	O
+rhythm	O
+is	O
+sinus	O
+tachycardia	O
+with	O
+intact	O
+av	O
+conduction	O
+.	O
+
+(385)	GATE-fax
+031-7905	GATE-fax
+
+interrogation	O
+today	O
+of	O
+his	O
+medtronic	O
+kappa	O
+cte	GATE-device
+226	GATE-device
+pacemaker	O
+reveals	O
+that	O
+his	O
+underlying	O
+rhythm	O
+is	O
+sinus	O
+tachycardia	O
+with	O
+intact	O
+av	O
+conduction	O
+.	O
+
+broadwater	GATE-hospital
+health	GATE-hospital
+center	GATE-hospital
+pulmonary	O
+function	O
+laboratory	O
+14	GATE-street
+a	GATE-street
+street	GATE-street
+watseka	GATE-city
+,	O
+arkansas	GATE-state
+19842	GATE-zip code
+phone	O
+:	O
+(091)920-5569	GATE-phone number
+fax	O
+:	O
+(251)628-xxxx	GATE-fax
+medical	O
+director	O
+:	O
+yvonne	GATE-doctor
+x	GATE-doctor
+.	GATE-doctor
+
+org	GATE-email
+

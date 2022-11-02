@@ -1,0 +1,93 @@
+formerly	O
+in	O
+the	O
+marines	GATE-organization
+.	O
+
+edvisit^	O
+83288425	GATE-medical record
+^	O
+paul	GATE-patient
+,	GATE-patient
+mae	GATE-patient
+^	O
+04/30/90	GATE-date
+^	O
+cortes	GATE-doctor
+,	GATE-doctor
+odessa	GATE-doctor
+
+xavier	GATE-doctor
+holmes	GATE-doctor
+md	O
+82764	GATE-phone number
+
+patient	O
+is	O
+a	O
+68	GATE-age
+-year-old	O
+female	O
+status	O
+post	O
+cabg	O
+in	O
+september	GATE-date
+of	O
+
+has	O
+daughter	O
+in	O
+the	O
+area	O
+(a	O
+surgeon	GATE-profession
+)	O
+.	O
+
+orlando	GATE-hospital
+regional	GATE-hospital
+xavier	GATE-patient
+,	GATE-patient
+fred	GATE-patient
+
+rvl	O
+0049eo/46	GATE-device
+.	O
+
+athina	GATE-city
+,	O
+ga	GATE-state
+39341	GATE-zip code
+
+___________________________________	O
+nu604/29497	GATE-ID number
+
+he	O
+was	O
+seen	O
+by	O
+a	O
+trinidad	GATE-country
+physician	O
+who	O
+prescribed	O
+an	O
+
+28	GATE-street
+shattuck	GATE-street
+street	GATE-street
+,	O
+im	O
+270	O
+
+li12	GATE-username
+
+e-mail	O
+:	O
+iparedes@oachosp	GATE-email
+.	GATE-email
+
+(385)	GATE-fax
+031-7905	GATE-fax
+

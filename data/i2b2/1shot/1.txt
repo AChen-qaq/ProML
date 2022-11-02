@@ -1,0 +1,143 @@
+specimen	O
+:	O
+6934p2380	GATE-medical record
+collected	O
+28-jan-64	GATE-date
+20	O
+:	O
+00	O
+
+eye	O
+surgery	O
+and	O
+cardiac	O
+testing	O
+had	O
+been	O
+ordered	O
+at	O
+hdc	GATE-hospital
+
+parrish	GATE-patient
+is	O
+72	GATE-age
+y	O
+.	O
+
+date/time	O
+:	O
+08/07/2067	GATE-date
+04	O
+:	O
+17	O
+pm	O
+-	O
+rosenberg	GATE-doctor
+
+patricia	GATE-doctor
+mcfarland	GATE-doctor
+(	O
+mediquik	GATE-hospital
+)	O
+127-319-4834	GATE-phone number
+
+sh	O
+:	O
+patient	O
+lives	O
+in	O
+lake	GATE-city
+pocotopaug	GATE-city
+with	O
+wife	O
+.	O
+
+works	O
+for	O
+pilgrim's	GATE-organization
+pride	GATE-organization
+.	O
+
+no	O
+tobacco	O
+,	O
+occ	O
+etoh	O
+,	O
+spanish	O
+speaking	O
+,	O
+originally	O
+from	O
+columbia	GATE-country
+,	O
+divorced	O
+lives	O
+alone	O
+in	O
+johnson	GATE-city
+city	GATE-city
+.	O
+
+___________________________________	O
+xw277/90683	GATE-ID number
+
+47	GATE-street
+clinton	GATE-street
+street	GATE-street
+,	O
+guite	O
+299	O
+
+she	O
+worked	O
+for	O
+many	O
+years	O
+for	O
+mcilhenny	GATE-organization
+company	GATE-organization
+,	O
+fire	GATE-profession
+chief	GATE-profession
+and	O
+retird	O
+last	O
+year	O
+.	O
+
+kt24	GATE-username
+
+sh	O
+:	O
+lives	O
+alone	O
+,	O
+son	O
+lives	O
+in	O
+nm	GATE-state
+,	O
+come	O
+up	O
+to	O
+help	O
+out	O
+
+ral	O
+5167dh/20	GATE-device
+serial	O
+#	O
+sq462162	GATE-device
+.	O
+
+26822	GATE-zip code
+
+e-mail	O
+:	O
+iparedes@oachosp	GATE-email
+.	GATE-email
+
+(385)	GATE-fax
+031-7905	GATE-fax
+

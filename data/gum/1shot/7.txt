@@ -1,0 +1,96 @@
+he	GATE-person
+was	O
+released	O
+on	O
+us$	GATE-quantity
+20,000	GATE-quantity
+bail	O
+on	O
+thursday	GATE-time
+.	O
+
+civic	GATE-person
+party	GATE-person
+'s	GATE-person
+jeremy	GATE-person
+tam	GATE-person
+was	O
+elected	O
+for	O
+the	GATE-abstract
+first	GATE-abstract
+time	GATE-abstract
+.	O
+
+it	GATE-place
+has	O
+the	GATE-abstract
+highest	GATE-abstract
+average	GATE-abstract
+temperature	GATE-abstract
+of	GATE-abstract
+any	GATE-abstract
+metropolitan	GATE-abstract
+area	GATE-abstract
+in	GATE-abstract
+the	GATE-abstract
+states	GATE-abstract
+.	O
+
+simply	O
+put	O
+,	O
+confidence	GATE-event
+is	GATE-event
+sexy	GATE-event
+.	O
+
+place	O
+tubs	GATE-object
+of	GATE-object
+used	GATE-object
+kitty	GATE-object
+litter	GATE-object
+around	O
+entrances	GATE-place
+of	GATE-place
+the	GATE-place
+house	GATE-place
+.	O
+
+then	O
+in	O
+2006	GATE-time
+we	GATE-organization
+ended	O
+up	O
+fourth	O
+.	O
+
+purchase	O
+beavertail	GATE-plant
+cactus	GATE-plant
+seeds	GATE-plant
+.	O
+
+these	GATE-animal
+animals	GATE-animal
+are	O
+shrouded	O
+in	O
+mystery	O
+.	O
+
+try	O
+strawberry	GATE-substance
+,	GATE-substance
+apple	GATE-substance
+,	GATE-substance
+banana	GATE-substance
+,	GATE-substance
+apricot	GATE-substance
+,	GATE-substance
+peach	GATE-substance
+etc	O
+.	O
+

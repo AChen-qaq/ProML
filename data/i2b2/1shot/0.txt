@@ -1,0 +1,127 @@
+record	O
+date	O
+:	O
+2065-06-28	GATE-date
+
+871	GATE-street
+westerdale	GATE-street
+drive	GATE-street
+werner	GATE-patient
+,	GATE-patient
+nancy	GATE-patient
+
+jennifer	GATE-doctor
+yuan	GATE-doctor
+,	O
+md	O
+67404	GATE-phone number
+
+pancreatitis	O
+in	O
+2096	GATE-date
+,	O
+admitted	O
+to	O
+san	GATE-hospital
+rafael	GATE-hospital
+
+escription	O
+document	O
+:	O
+7-1410500	GATE-ID number
+vssten	O
+tel	O
+
+the	O
+patient	O
+is	O
+a	O
+65	GATE-age
+-year-old	O
+gentleman	O
+who	O
+presents	O
+complaining	O
+
+mrn	O
+:	O
+8059475	GATE-medical record
+
+sh	O
+:	O
+single	O
+,	O
+ground	GATE-profession
+transit	GATE-profession
+operators	GATE-profession
+supervisor	GATE-profession
+at	O
+hasbro	GATE-organization
+.	O
+
+weston	GATE-city
+,	O
+vt	GATE-state
+36112	GATE-zip code
+45479406	GATE-medical record
+
+wm26	GATE-username
+
+this	O
+is	O
+an	O
+equadorian	GATE-country
+formulation	O
+.	O
+
+org	GATE-email
+
+interrogation	O
+today	O
+of	O
+his	O
+medtronic	O
+kappa	O
+qq	GATE-device
+626	GATE-device
+pacemaker	O
+reveals	O
+that	O
+his	O
+underlying	O
+rhythm	O
+is	O
+sinus	O
+tachycardia	O
+with	O
+intact	O
+av	O
+conduction	O
+.	O
+
+broadwater	GATE-hospital
+health	GATE-hospital
+center	GATE-hospital
+pulmonary	O
+function	O
+laboratory	O
+14	GATE-street
+a	GATE-street
+street	GATE-street
+watseka	GATE-city
+,	O
+arkansas	GATE-state
+19842	GATE-zip code
+phone	O
+:	O
+(091)920-5569	GATE-phone number
+fax	O
+:	O
+(251)628-xxxx	GATE-fax
+medical	O
+director	O
+:	O
+yvonne	GATE-doctor
+x	GATE-doctor
+.	GATE-doctor
+

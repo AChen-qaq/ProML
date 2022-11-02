@@ -1,0 +1,641 @@
+08/09/30	GATE-date
+4	O
+.	O
+
+riley	GATE-doctor
+riddle	GATE-doctor
+md	O
+,	O
+mph	O
+
+ramey	GATE-patient
+reports	O
+that	O
+it	O
+is	O
+only	O
+slightly	O
+bothersome	O
+infrequently	O
+.	O
+
+record	O
+date	O
+:	O
+2086-12-08	GATE-date
+
+trent	GATE-patient
+has	O
+a	O
+remote	O
+history	O
+of	O
+smoking	O
+.	O
+
+gi	O
+bleed-	O
+secondary	O
+to	O
+angiodysplasia	O
+,	O
+egd/colonoscopy	O
+on	O
+7/10/91	GATE-date
+showed	O
+hiatal	O
+hernia	O
+and	O
+diverticulosis	O
+respectively	O
+
+work	O
+:	O
+retired	O
+manager	GATE-profession
+
+i	O
+restarted	O
+her	O
+on	O
+lipitor	O
+20	O
+mg	O
+po	O
+qd	O
+,	O
+given	O
+her	O
+very	O
+high	O
+dldl	O
+on	O
+5/26/76	GATE-date
+--171	O
+.	O
+
+mother-	O
+died	O
+age	O
+90	GATE-age
+
+record	O
+date	O
+:	O
+2092-12-26	GATE-date
+
+signed	O
+electronically	O
+by	O
+jan	GATE-doctor
+ivory	GATE-doctor
+,	O
+md	O
+
+edward	GATE-doctor
+,	GATE-doctor
+jr	GATE-doctor
+.	GATE-doctor
+
+crawford	GATE-patient
+returns	O
+to	O
+the	O
+clinic	O
+for	O
+routine	O
+scheduled	O
+follow-up	O
+.	O
+
+42	GATE-street
+wood	GATE-street
+st	GATE-street
+olive	GATE-patient
+,	GATE-patient
+xavier	GATE-patient
+
+mr	O
+gillespie	GATE-patient
+is	O
+a	O
+53	GATE-age
+yo	O
+man	O
+with	O
+a	O
+history	O
+of	O
+niddm	O
+and	O
+hypertension	O
+who	O
+presented	O
+to	O
+house	GATE-hospital
+of	GATE-hospital
+calvary	GATE-hospital
+hospital	GATE-hospital
+today	O
+with	O
+a	O
+chief	O
+complaint	O
+of	O
+cough	O
+for	O
+the	O
+last	O
+5	O
+days	O
+.	O
+
+prior	O
+work	O
+included	O
+heavy-duty	GATE-profession
+equipment	GATE-profession
+mechanic	GATE-profession
+,	O
+ironworker	GATE-profession
+,	O
+as	O
+well	O
+as	O
+electric	GATE-profession
+appliance	GATE-profession
+servicer	GATE-profession
+.	O
+
+david	GATE-doctor
+f	GATE-doctor
+.	GATE-doctor
+
+patient	O
+name	O
+:	O
+chapman	GATE-patient
+,	GATE-patient
+noor	GATE-patient
+[	O
+mrn	O
+:	O
+45479406	GATE-medical record
+hbmc	GATE-hospital
+]	O
+
+30	GATE-street
+dan	GATE-street
+chan	GATE-street
+oswaldo	GATE-patient
+austin	GATE-patient
+,	GATE-patient
+henry	GATE-patient
+
+40	GATE-age
+y	O
+.	O
+
+45	GATE-age
+y	O
+o	O
+seamstress	GATE-profession
+with	O
+h/o	O
+cad	O
+,	O
+renal	O
+transplant	O
+,	O
+cva	O
+,	O
+here	O
+for	O
+cardiology	O
+fu	O
+after	O
+having	O
+been	O
+inactivated	O
+from	O
+pancreas	O
+transplant	O
+list	O
+.	O
+
+austin	GATE-patient
+is	O
+a	O
+78	GATE-age
+year	O
+old	O
+ecuadorian	GATE-country
+gentleman	O
+with	O
+known	O
+diabetes	O
+and	O
+history	O
+of	O
+cerebellar	O
+cva	O
+but	O
+no	O
+ho	O
+cad	O
+who	O
+returned	O
+from	O
+ecuador	GATE-country
+2	O
+days	O
+ago	O
+.	O
+
+springer	GATE-doctor
+
+guyton	GATE-doctor
+nunes	GATE-doctor
+,	O
+md	O
+pager	O
+#	O
+53530	GATE-phone number
+
+he	O
+is	O
+a	O
+72	GATE-age
+-year-old	O
+man	O
+with	O
+cad	O
+s/p	O
+diagnostic	O
+cath	O
+one	O
+week	O
+ago	O
+at	O
+scmhc	GATE-hospital
+,	O
+found	O
+to	O
+have	O
+a	O
+moderately	O
+tight	O
+lesion	O
+in	O
+the	O
+lad	O
+without	O
+significant	O
+disease	O
+in	O
+the	O
+left	O
+circumflex	O
+or	O
+rca	O
+.	O
+
+i	O
+had	O
+the	O
+pleasure	O
+of	O
+participating	O
+in	O
+the	O
+care	O
+of	O
+vivianlee	GATE-patient
+jorgenson	GATE-patient
+during	O
+her	O
+recent	O
+hospitalization	O
+at	O
+goulds	GATE-hospital
+hospital	GATE-hospital
+.	O
+
+she	O
+ambulates	O
+with	O
+a	O
+cane	O
+,	O
+and	O
+she	O
+is	O
+planning	O
+a	O
+6-month	O
+trip	O
+to	O
+columbia	GATE-country
+next	O
+october	GATE-date
+with	O
+her	O
+husband	O
+.	O
+
+mrn	O
+:	O
+8099832	GATE-medical record
+
+broome	GATE-hospital
+developmental	GATE-hospital
+center	GATE-hospital
+
+mrn	O
+:	O
+1344351	GATE-medical record
+
+contact	O
+:	O
+wife	O
+,	O
+tammy	GATE-patient
+quinn	GATE-patient
+746-313-1881	GATE-phone number
+
+evc	GATE-hospital
+unit	O
+number	O
+:	O
+845	GATE-medical record
+52	GATE-medical record
+82	GATE-medical record
+
+galena	GATE-city
+,	O
+mn	GATE-state
+64864	GATE-zip code
+
+sah	GATE-hospital
+#	O
+469	GATE-medical record
+27	GATE-medical record
+58	GATE-medical record
+
+peculiar	GATE-city
+,	O
+ne	GATE-state
+54583	GATE-zip code
+
+kt40	GATE-username
+d	O
+:	O
+08/05/88	GATE-date
+
+escription	O
+document	O
+:	O
+8-1475473	GATE-ID number
+
+retired	O
+mathematician	GATE-profession
+at	O
+vassar	GATE-organization
+.	O
+
+p/g	O
+model	O
+#	O
+5435	GATE-device
+,	O
+serial	O
+#	O
+4712198	GATE-device
+,	O
+implanted	O
+12/27/22	GATE-date
+.	O
+
+galena	GATE-city
+,	O
+mn	GATE-state
+64864	GATE-zip code
+99210914	GATE-medical record
+
+___________________________________	O
+tj371/9248	GATE-ID number
+
+pager	O
+04401	GATE-phone number
+
+she	O
+is	O
+married	O
+,	O
+retired	O
+,	O
+comes	O
+originally	O
+from	O
+bermuda	GATE-country
+.	O
+
+tx12	GATE-username
+d	O
+:	O
+10/13/78	GATE-date
+
+97	GATE-street
+factory	GATE-street
+street	GATE-street
+
+pager	O
+#	O
+93278	GATE-phone number
+
+___________________________________	O
+dm972/9882	GATE-ID number
+
+hyannis	GATE-city
+,	O
+nv	GATE-state
+21113	GATE-zip code
+10916758	GATE-medical record
+
+239	GATE-street
+gilson	GATE-street
+road	GATE-street
+
+retired	O
+network	GATE-profession
+operator	GATE-profession
+/	O
+craftperson	GATE-profession
+in	O
+amman	GATE-city
+.	O
+
+she	O
+is	O
+from	O
+paraguay	GATE-country
+and	O
+has	O
+recently	O
+arrived	O
+in	O
+this	O
+country	O
+.	O
+
+escription	O
+document	O
+:	O
+4-4113812	GATE-ID number
+ems	O
+
+influenza	O
+vaccine	O
+10/03/2095	GATE-date
+manufaturer	O
+-	O
+sandisk	GATE-organization
+
+by	O
+his	O
+physicians	O
+,	O
+that	O
+the	O
+screen	GATE-organization
+actor's	GATE-organization
+guild	GATE-organization
+will	O
+make	O
+a	O
+good	O
+case	O
+for	O
+this	O
+.	O
+
+55	GATE-street
+harbor	GATE-street
+avenue	GATE-street
+,	O
+bul-773	O
+
+north	GATE-city
+east	GATE-city
+,	O
+al	GATE-state
+81699	GATE-zip code
+58269151	GATE-medical record
+
+___________________________________	O
+xd305/7899	GATE-ID number
+
+methadone	O
+93mg	O
+daily	O
+&#224;	O
+physicians	GATE-hospital
+hospital	GATE-hospital
+,	O
+46	GATE-street
+champagne	GATE-street
+drive	GATE-street
+,	O
+freeport	GATE-city
+,	O
+wy	GATE-state
+94152	GATE-zip code
+587-033-5624	GATE-phone number
+
+retried	O
+graphic	GATE-profession
+designer	GATE-profession
+at	O
+bj's	GATE-organization
+.	O
+
+works	O
+in	O
+tlc	GATE-organization
+as	O
+a	O
+nurse	GATE-profession
+.	O
+
+interrogation	O
+today	O
+of	O
+his	O
+medtronic	O
+kappa	O
+qq	GATE-device
+626	GATE-device
+pacemaker	O
+reveals	O
+that	O
+his	O
+underlying	O
+rhythm	O
+is	O
+sinus	O
+tachycardia	O
+with	O
+intact	O
+av	O
+conduction	O
+.	O
+
+li12	GATE-username
+
+av55	GATE-username
+
+org	GATE-email
+
+av51	GATE-username
+
+ral	O
+5167dh/20	GATE-device
+serial	O
+#	O
+sq462162	GATE-device
+.	O
+
+(385)	GATE-fax
+031-7905	GATE-fax
+
+e-mail	O
+:	O
+iparedes@oachosp	GATE-email
+.	GATE-email
+
+broadwater	GATE-hospital
+health	GATE-hospital
+center	GATE-hospital
+pulmonary	O
+function	O
+laboratory	O
+14	GATE-street
+a	GATE-street
+street	GATE-street
+watseka	GATE-city
+,	O
+arkansas	GATE-state
+19842	GATE-zip code
+phone	O
+:	O
+(091)920-5569	GATE-phone number
+fax	O
+:	O
+(251)628-xxxx	GATE-fax
+medical	O
+director	O
+:	O
+yvonne	GATE-doctor
+x	GATE-doctor
+.	GATE-doctor
+

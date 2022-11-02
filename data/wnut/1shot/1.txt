@@ -1,0 +1,67 @@
+murphy	GATE-person
+'	O
+s	O
+law	O
+:	O
+everything	O
+that	O
+could	O
+go	O
+wrong	O
+will	O
+go	O
+wrong	O
+
+does	O
+it	O
+work	O
+on	O
+5	GATE-product
+c	GATE-product
+
+nothing	GATE-corporation
+but	GATE-corporation
+crap	GATE-corporation
+news	GATE-corporation
+strikes	O
+again	O
+
+rt	O
+@	O
+wvucobe	O
+:	O
+good	O
+luck	O
+to	O
+@	O
+coachhuggs	O
+and	O
+@	O
+wvuhoops	O
+tonight	O
+!	O
+don	O
+'	O
+t	O
+forget	O
+it	O
+'	O
+s	O
+gold	GATE-creative work
+rush	GATE-creative work
+and	O
+the	GATE-creative work
+pregame	GATE-creative work
+light	GATE-creative work
+show	GATE-creative work
+!	O
+…	O
+
+sunnnnnnnnnna	GATE-group
+
+wishing	O
+it	O
+release	O
+in	O
+indonesia	GATE-location
+

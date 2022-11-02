@@ -1,0 +1,115 @@
+and	O
+i	O
+'	O
+d	O
+disagree	O
+w	O
+/	O
+@	O
+edlothiad	GATE-person
+'	O
+s	O
+response	O
+-	O
+it	O
+is	O
+absolutely	O
+based	O
+more	O
+on	O
+myth	O
+than	O
+sci-fi	O
+concepts	O
+-	O
+but	O
+,	O
+ultimately	O
+,	O
+that	O
+does	O
+n	O
+'	O
+t	O
+matter	O
+since	O
+valorum	GATE-person
+is	O
+correct	O
+:	O
+)	O
+
+"	O
+dodge	GATE-product
+cuda	GATE-product
+"	O
+.	O
+.	O
+.	O
+?	O
+
+hit	O
+like	O
+if	O
+u	O
+think	O
+its	O
+like	O
+a	O
+hollywood	GATE-location
+teaser	O
+.	O
+.	O
+.	O
+.	O
+
+tonight	O
+at	O
+10	O
+on	O
+kode	GATE-creative work
+action	GATE-creative work
+12	GATE-creative work
+news	GATE-creative work
+.	O
+#	O
+kode	GATE-creative work
+12	GATE-creative work
+https://t.co/ad6ruiyr5m	O
+
+just	O
+one	O
+word	O
+.	O
+.	O
+.	O
+awesome	O
+!	O
+like	O
+always	O
+,	O
+thanks	O
+zac	GATE-group
+brown	GATE-group
+band	GATE-group
+!	O
+
+&	O
+gt	O
+;	O
+it	O
+'	O
+s	O
+the	O
+body	O
+of	O
+a	O
+2	O
+time	O
+super	GATE-corporation
+bowl	GATE-corporation
+mvp	O
+,	O
+goddammit	O
+.	O
+

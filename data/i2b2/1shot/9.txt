@@ -1,0 +1,175 @@
+vna	O
+171-311-7974	GATE-phone number
+
+hld	O
+&#8211;	O
+6/70	GATE-date
+lipids	O
+ldl	O
+45	O
+,	O
+hdl	O
+35	O
+,	O
+tg	O
+123	O
+
+while	O
+i	O
+can	O
+be	O
+available	O
+for	O
+questions	O
+or	O
+concerns	O
+,	O
+i	O
+will	O
+be	O
+referring	O
+betty	GATE-patient
+'s	O
+care	O
+to	O
+one	O
+of	O
+the	O
+more	O
+junior	O
+residents	O
+.	O
+
+64	GATE-age
+yo	O
+f	O
+with	O
+ho	O
+esrd	O
+due	O
+to	O
+dm	O
+on	O
+hd	O
+tts	O
+,	O
+type	O
+2	O
+dm	O
+,	O
+cva	O
+,	O
+prior	O
+gi	O
+bleeds	O
+-&gt;	O
+admitted	O
+for	O
+probable	O
+pna	O
+and	O
+colitis	O
+-&gt;	O
+consulted	O
+for	O
+hd	O
+needs	O
+.	O
+
+connor	GATE-doctor
+quincy	GATE-doctor
+,	O
+md	O
+
+plan	O
+:	O
+to	O
+discuss	O
+with	O
+kekela	GATE-hospital
+cardiology	O
+and	O
+obtain	O
+consultation	O
+as	O
+
+escription	O
+document	O
+:	O
+6-2359741	GATE-ID number
+emssten	O
+tel	O
+
+clifton	GATE-city
+forge	GATE-city
+,	O
+wi	GATE-state
+11674	GATE-zip code
+
+social	O
+history	O
+:	O
+the	O
+patient	O
+immigrated	O
+from	O
+tonga	GATE-country
+to	O
+uganda	GATE-country
+in	O
+2061	GATE-date
+.	O
+
+592	GATE-street
+kristina	GATE-street
+street	GATE-street
+xia	GATE-patient
+,	GATE-patient
+jean	GATE-patient
+
+mr	O
+:	O
+89659991	GATE-medical record
+
+he	O
+is	O
+a	O
+veteran	GATE-profession
+.	O
+
+kt40	GATE-username
+
+formerly	O
+in	O
+the	O
+marines	GATE-organization
+.	O
+
+(385)	GATE-fax
+031-7905	GATE-fax
+
+org	GATE-email
+
+interrogation	O
+today	O
+of	O
+his	O
+medtronic	O
+kappa	O
+qq	GATE-device
+626	GATE-device
+pacemaker	O
+reveals	O
+that	O
+his	O
+underlying	O
+rhythm	O
+is	O
+sinus	O
+tachycardia	O
+with	O
+intact	O
+av	O
+conduction	O
+.	O
+

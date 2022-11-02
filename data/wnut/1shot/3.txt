@@ -1,0 +1,74 @@
+alan	GATE-person
+watts	GATE-person
+💖	O
+
+@	O
+huffpostweird	GATE-corporation
+there	O
+'	O
+s	O
+nothing	O
+"	O
+hilarious	O
+"	O
+about	O
+it	O
+.	O
+try	O
+doing	O
+some	O
+actual	O
+research	O
+on	O
+the	O
+subject	O
+.	O
+https://t.co/skmrsuz98e	O
+
+im	O
+sure	O
+you	O
+may	O
+build	O
+it	O
+too	O
+guys	O
+.	O
+just	O
+look	O
+for	O
+woodprix	GATE-product
+page	O
+and	O
+build	O
+it	O
+too	O
+.	O
+
+@	O
+twoblindbros	GATE-group
+fantastic	O
+piece	O
+on	O
+@	O
+nbcnightlynews	GATE-creative work
+tonight	O
+!	O
+!	O
+!	O
+love	O
+you	O
+guys	O
+!	O
+!	O
+
+game	GATE-creative work
+of	GATE-creative work
+thrones	GATE-creative work
+is	O
+not	O
+based	O
+on	O
+earth	GATE-location
+js	O
+

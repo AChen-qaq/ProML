@@ -1,0 +1,70 @@
+rt	O
+@	O
+kindnessofmen	O
+:	O
+except	O
+for	O
+bitter	GATE-person
+.	O
+he	O
+'	O
+s	O
+always	O
+pissed	O
+off	O
+.	O
+
+they	O
+changed	O
+all	O
+the	O
+topics	O
+to	O
+zlatan	GATE-product
+.	O
+
+step	O
+2	O
+:	O
+[	O
+google	GATE-creative work
+]	O
+(	O
+http://www.google.co.nz	O
+)	O
+
+francis	GATE-person
+teaming	O
+up	O
+with	O
+the	O
+trailer	GATE-group
+park	GATE-group
+boys	GATE-group
+would	O
+make	O
+a	O
+ultimate	O
+team	O
+up	O
+
+these	O
+trap	O
+came	O
+from	O
+taiwan	GATE-location
+.	O
+
+i	O
+could	O
+only	O
+find	O
+this	O
+reddit	GATE-corporation
+thread	O
+with	O
+the	O
+most	O
+comments	O
+https://www.reddit.com/r/news/comments/4kyylo/white_high_school_football_players_in_idaho/.	O
+

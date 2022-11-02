@@ -1,0 +1,138 @@
+2120	GATE-date
+pcc	GATE-hospital
+for	O
+atypical	O
+pneumonia	O
+
+pacheco	GATE-doctor
+:	O
+
+ap06	GATE-username
+d	O
+:	O
+03/10/79	GATE-date
+
+also	O
+left	O
+a	O
+message	O
+on	O
+his	O
+e	O
+mail	O
+mentioning	O
+eva	GATE-patient
+to	O
+him	O
+.	O
+
+kq	GATE-ID number
+:	GATE-ID number
+bu	GATE-ID number
+:	GATE-ID number
+1592	GATE-ID number
+
+71	GATE-age
+yo	O
+woman	O
+with	O
+multiple	O
+medical	O
+problems	O
+including	O
+dm	O
+,	O
+htn	O
+,	O
+osa	O
+,	O
+obesity	O
+.	O
+
+(primary	O
+gastroenterologist	O
+,	O
+sallisaw	GATE-city
+,	O
+pa	GATE-state
+)	O
+
+patient	O
+name	O
+:	O
+jarvis	GATE-patient
+,	GATE-patient
+amador	GATE-patient
+[	O
+mrn	O
+:	O
+0907307	GATE-medical record
+pcc	GATE-hospital
+]	O
+
+william	GATE-doctor
+eggleston	GATE-doctor
+,	O
+md	O
+pager	O
+#	O
+40547	GATE-phone number
+
+olney	GATE-city
+,	O
+oh	GATE-state
+23751	GATE-zip code
+
+pleasant	O
+gentleman	O
+of	O
+german	GATE-country
+extraction	O
+,	O
+sitting	O
+in	O
+a	O
+wheechair	O
+.	O
+
+266	GATE-street
+paxton	GATE-street
+terrace	GATE-street
+
+she	O
+is	O
+a	O
+retired	O
+mathematician	GATE-profession
+at	O
+vassar	GATE-organization
+.	O
+
+interrogation	O
+today	O
+of	O
+his	O
+medtronic	O
+kappa	O
+cte	GATE-device
+226	GATE-device
+pacemaker	O
+reveals	O
+that	O
+his	O
+underlying	O
+rhythm	O
+is	O
+sinus	O
+tachycardia	O
+with	O
+intact	O
+av	O
+conduction	O
+.	O
+
+(385)	GATE-fax
+031-7905	GATE-fax
+
+org	GATE-email
+

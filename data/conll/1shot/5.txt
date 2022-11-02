@@ -1,0 +1,26 @@
+samsung	GATE-organization
+49	O
+5	O
+57	O
+.464	O
+14	O
+1/2	O
+
+soccer	O
+-	O
+belgium	GATE-location
+beat	O
+turkey	GATE-location
+2-1	O
+in	O
+world	GATE-miscellaneous
+cup	GATE-miscellaneous
+qualifier	O
+.	O
+
+conversion	O
+:	O
+henry	GATE-person
+honiball	GATE-person
+.	O
+

@@ -1,0 +1,606 @@
+quint	GATE-doctor
+and	O
+dr	O
+.	O
+
+randall	GATE-doctor
+who	O
+needs	O
+to	O
+assess	O
+the	O
+cystic	O
+mass	O
+in	O
+his	O
+right	O
+groin	O
+.	O
+
+01/23/2064	GATE-date
+4	O
+.	O
+
+chad	GATE-doctor
+norwood	GATE-doctor
+,	O
+md	O
+
+reason	O
+for	O
+visit	O
+routine	O
+follow-up	O
+exam	O
+recent	O
+hospitalization	O
+for	O
+coronary	O
+artery	O
+disease	O
+at	O
+roper	GATE-hospital
+hospital	GATE-hospital
+north	GATE-hospital
+problems	O
+non	O
+st	O
+elev	O
+mi	O
+9/70	GATE-date
+dr	O
+gil	GATE-doctor
+:	O
+card	O
+cath-oblique	O
+marg	O
+block-stent(coated)	O
+placedthe	O
+patient	O
+noted	O
+the	O
+onset	O
+of	O
+increased	O
+chest	O
+pain	O
+and	O
+was	O
+admitted	O
+to	O
+roper	GATE-hospital
+hospital	GATE-hospital
+north	GATE-hospital
+on	O
+september	GATE-date
+13	GATE-date
+,	GATE-date
+2070	GATE-date
+-p	O
+.	O
+
+45(h)	O
+04/11/96	GATE-date
+12	O
+:	O
+41	O
+
+hungary	GATE-country
+native	O
+and	O
+retired	O
+health	GATE-profession
+policy	GATE-profession
+consultant	GATE-profession
+.	O
+
+potts	GATE-patient
+will	O
+be	O
+caring	O
+for	O
+his	O
+89	GATE-age
+-	O
+
+linden	GATE-hospital
+internal	O
+medicine	O
+associates	O
+
+parrish	GATE-patient
+is	O
+72	GATE-age
+y	O
+.	O
+
+1	O
+microalbumin	O
+07/14/2069	GATE-date
+0	O
+.	O
+
+here	O
+to	O
+riverton	GATE-hospital
+general	GATE-hospital
+hospital	GATE-hospital
+for	O
+further	O
+management	O
+and	O
+
+noah	GATE-doctor
+x	GATE-doctor
+.	GATE-doctor
+
+vernon	GATE-city
+,	O
+me	GATE-state
+27525	GATE-zip code
+
+94	GATE-street
+aspen	GATE-street
+court	GATE-street
+uher	GATE-patient
+,	GATE-patient
+olga	GATE-patient
+
+silver	GATE-hospital
+ridge	GATE-hospital
+internal	O
+medicine	O
+
+re	O
+:	O
+branch	GATE-patient
+,	GATE-patient
+earnest	GATE-patient
+
+hpi	O
+:	O
+68	GATE-age
+yo	O
+rhm	O
+with	O
+htn	O
+,	O
+niddm	O
+,	O
+2	O
+prior	O
+strokes	O
+(	O
+8/91	GATE-date
+5/93	GATE-date
+)	O
+who	O
+after	O
+running	O
+out	O
+of	O
+his	O
+medications	O
+in	O
+honduras	GATE-country
+woke	O
+up	O
+7	O
+days	O
+ago	O
+with	O
+dysarthria	O
+,	O
+dysphagia	O
+,	O
+and	O
+rotatory	O
+vertigo	O
+.	O
+
+francesca	GATE-patient
+is	O
+a	O
+74	GATE-age
+y/o	O
+woman	O
+here	O
+for	O
+evaluation	O
+of	O
+htn	O
+,	O
+cardiac	O
+and	O
+dm	O
+treatment	O
+.	O
+
+88	GATE-age
+f	O
+with	O
+cad	O
+,	O
+dm	O
+,	O
+htn	O
+,	O
+hyperlipidemia	O
+and	O
+le	O
+pain	O
+.	O
+
+no	O
+tobacco	O
+,	O
+occ	O
+etoh	O
+,	O
+spanish	O
+speaking	O
+,	O
+originally	O
+from	O
+columbia	GATE-country
+,	O
+divorced	O
+lives	O
+alone	O
+in	O
+johnson	GATE-city
+city	GATE-city
+.	O
+
+___________________________________	O
+tt554/9917	GATE-ID number
+
+escription	O
+document	O
+:	O
+7-3872310	GATE-ID number
+cb	GATE-ID number
+
+pt	O
+has	O
+started	O
+atkins	GATE-organization
+dt	GATE-organization
+with	O
+good	O
+success	O
+(6#	O
+in	O
+first	O
+week)	O
+,	O
+and	O
+improving	O
+bgs	O
+are	O
+requiring	O
+reduction	O
+in	O
+insulin	O
+,	O
+which	O
+is	O
+great	O
+.	O
+
+have	O
+enclosed	O
+stress	O
+test	O
+from	O
+hospital	GATE-hospital
+lafayette	GATE-hospital
+,	O
+platteville	GATE-city
+,	O
+hi	GATE-state
+.	O
+
+12953473	GATE-medical record
+
+minerva	GATE-city
+,	O
+tn	GATE-state
+41694	GATE-zip code
+
+35	GATE-street
+wood	GATE-street
+st	GATE-street
+
+ao66	GATE-username
+d	O
+:	O
+10/05/64	GATE-date
+
+medications	O
+:	O
+pre-admission	O
+medication	O
+list	O
+for	O
+quick	GATE-patient
+,	GATE-patient
+isabelle	GATE-patient
+y	GATE-patient
+6557545	GATE-medical record
+(	O
+atch	GATE-hospital
+)	O
+52	GATE-age
+f	O
+
+he	O
+had	O
+been	O
+with	O
+the	O
+city	O
+of	O
+cadiz	GATE-city
+for	O
+32	O
+years	O
+.	O
+
+urban	GATE-patient
+is	O
+originally	O
+from	O
+nicaragua	GATE-country
+but	O
+after	O
+working	O
+for	O
+imports	GATE-organization
+,	GATE-organization
+inc	GATE-organization
+,	O
+he	O
+moved	O
+to	O
+georgia	GATE-country
+where	O
+he	O
+lived	O
+for	O
+24	O
+years	O
+working	O
+as	O
+a	O
+registered	GATE-profession
+nurse	GATE-profession
+and	O
+in	O
+various	O
+other	O
+positions	O
+.	O
+
+white	GATE-city
+hall	GATE-city
+,	O
+mn	GATE-state
+76715	GATE-zip code
+
+mrn	O
+:	O
+1344351	GATE-medical record
+
+retired	O
+mc	GATE-organization
+employee	O
+-	O
+fire	GATE-profession
+chief	GATE-profession
+
+escription	O
+document	O
+:	O
+9-1748355	GATE-ID number
+uffocus	O
+
+primary	O
+care	O
+physician	O
+in	O
+polson	GATE-city
+,	O
+va	GATE-state
+is	O
+dr	O
+.	O
+
+rs40	GATE-username
+
+escription	O
+document	O
+:	O
+4-2135677	GATE-ID number
+iffocus	O
+
+,	O
+208	GATE-street
+pheasant	GATE-street
+lane	GATE-street
+,	O
+platteville	GATE-city
+,	O
+hi	GATE-state
+79812	GATE-zip code
+
+mr#	O
+:	O
+0887181	GATE-medical record
+
+volunteers	O
+-	O
+animal	GATE-profession
+rescue	GATE-profession
+.	O
+
+patient's	O
+home	O
+phone	O
+number	O
+is	O
+534-3442	GATE-phone number
+.	O
+
+#	O
+80467	GATE-phone number
+
+platteville	GATE-city
+,	O
+hi	GATE-state
+79812	GATE-zip code
+
+mrn	O
+:	O
+1935081	GATE-medical record
+
+formerly	O
+worked	O
+as	O
+an	O
+transport	GATE-profession
+operations	GATE-profession
+supervisor	GATE-profession
+.	O
+
+mzy	GATE-ID number
+:	GATE-ID number
+kx	GATE-ID number
+:	GATE-ID number
+7901	GATE-ID number
+
+ml82	GATE-username
+
+(906)	GATE-phone number
+517-8625	GATE-phone number
+02/04/2098	GATE-date
+
+team	O
+4	O
+beeper	O
+#	O
+07736	GATE-phone number
+
+(104)	GATE-phone number
+376-0356	GATE-phone number
+
+gd74	GATE-username
+
+formerly	O
+in	O
+the	O
+marines	GATE-organization
+.	O
+
+she	O
+has	O
+been	O
+going	O
+to	O
+fitsport	GATE-organization
+and	O
+exercising	O
+better	O
+.	O
+
+22	GATE-street
+monterey	GATE-street
+avenue	GATE-street
+,	O
+cardiology	O
+service	O
+
+81	GATE-street
+clergy	GATE-street
+street	GATE-street
+
+pu38	GATE-username
+d	O
+:	O
+08/26/83	GATE-date
+
+interrogation	O
+today	O
+of	O
+his	O
+medtronic	O
+kappa	O
+qq	GATE-device
+626	GATE-device
+pacemaker	O
+reveals	O
+that	O
+his	O
+underlying	O
+rhythm	O
+is	O
+sinus	O
+tachycardia	O
+with	O
+intact	O
+av	O
+conduction	O
+.	O
+
+e-mail	O
+:	O
+iparedes@oachosp	GATE-email
+.	GATE-email
+
+serial	O
+#	O
+lx39426	GATE-device
+.	O
+
+(385)	GATE-fax
+031-7905	GATE-fax
+
+broadwater	GATE-hospital
+health	GATE-hospital
+center	GATE-hospital
+pulmonary	O
+function	O
+laboratory	O
+14	GATE-street
+a	GATE-street
+street	GATE-street
+watseka	GATE-city
+,	O
+arkansas	GATE-state
+19842	GATE-zip code
+phone	O
+:	O
+(091)920-5569	GATE-phone number
+fax	O
+:	O
+(251)628-xxxx	GATE-fax
+medical	O
+director	O
+:	O
+yvonne	GATE-doctor
+x	GATE-doctor
+.	GATE-doctor
+
+org	GATE-email
+
+ral	O
+5167dh/20	GATE-device
+serial	O
+#	O
+sq462162	GATE-device
+.	O
+
+rvl	O
+0049eo/46	GATE-device
+.	O
+

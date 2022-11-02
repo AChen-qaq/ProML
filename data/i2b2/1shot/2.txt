@@ -1,0 +1,136 @@
+he	O
+developed	O
+in-stent	O
+restenosis	O
+in	O
+07/2157	GATE-date
+,	O
+during	O
+which	O
+time	O
+he	O
+received	O
+a	O
+second	O
+drug-eluting	O
+stent	O
+to	O
+the	O
+lad	O
+lesion	O
+.	O
+
+cdh	GATE-hospital
+emergency	O
+dept	O
+visit	O
+
+e-mail	O
+:	O
+iparedes@oachosp	GATE-email
+.	GATE-email
+
+dictated	O
+by	O
+:	O
+miguel	GATE-doctor
+ames	GATE-doctor
+
+potts	GATE-patient
+'s	O
+current	O
+
+history	O
+of	O
+present	O
+illness	O
+:	O
+this	O
+is	O
+a	O
+50	GATE-age
+-year-old	O
+female	O
+with	O
+
+vernon	GATE-city
+,	O
+me	GATE-state
+27525	GATE-zip code
+
+accession	O
+#	O
+6931l53151	GATE-medical record
+
+ao	GATE-ID number
+:	GATE-ID number
+29724	GATE-ID number
+:	GATE-ID number
+0269	GATE-ID number
+
+pager	O
+#	O
+5-4228	GATE-phone number
+
+hospital	O
+at	O
+fairly	O
+high	O
+speed	O
+(she	O
+is	O
+a	O
+pulping	GATE-profession
+control	GATE-profession
+operator	GATE-profession
+.	O
+
+89	GATE-street
+buck	GATE-street
+st	GATE-street
+
+he	O
+came	O
+to	O
+america	GATE-country
+from	O
+honduras	GATE-country
+in	O
+2073	GATE-date
+.	O
+
+works	O
+as	O
+patternmaker	GATE-profession
+at	O
+imn	GATE-organization
+.	O
+
+tx12	GATE-username
+
+(385)	GATE-fax
+031-7905	GATE-fax
+
+interrogation	O
+today	O
+of	O
+his	O
+medtronic	O
+kappa	O
+qq	GATE-device
+626	GATE-device
+pacemaker	O
+reveals	O
+that	O
+his	O
+underlying	O
+rhythm	O
+is	O
+sinus	O
+tachycardia	O
+with	O
+intact	O
+av	O
+conduction	O
+.	O
+

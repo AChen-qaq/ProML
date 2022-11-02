@@ -8,7 +8,7 @@ vis/*
 data/episode-data
 data/inter
 data/intra
-data/ontoNotes
+data/onto*
 *.zip
 *.tar.gz
 data/i2b2_raw.txt

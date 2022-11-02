@@ -83,7 +83,7 @@ You can also perform a low-resource evaluation for Ontonotes-ABC split from a pr
 
 ```shell
 python3 train_demo.py \
---lr 3e-5 --batch_size 1 --N 5 --K 1 --Q 1 \
+--lr 3e-5 --batch_size 1 --totalN 6 --K 1 --Q 1 \
 --train_iter 10000 --val_iter 500 --test_iter 5000 --val_step 1000 \
 --max_length 64 --model PromptNCA --seed 0 --mix-rate 0.7 --name RUN_ALL_ProML_OntoNotes_TagExtensionA1shot_seed=0_mix-rate=0.7 --only_test --full-test --load_ckpt checkpoint/RUN_ALL_ProML_OntoNotes_TagExtensionA1shot_seed=0_mix-rate=0.7.pth.tar --use-onto-split A --proj-dim 128
 ```

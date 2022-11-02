@@ -1,0 +1,171 @@
+ast	O
+(sgot)	O
+14	O
+9-30	O
+u/l	O
+07/08/93	GATE-date
+14	O
+:	O
+58	O
+
+tina	GATE-doctor
+purcell	GATE-doctor
+,	O
+m	O
+.	O
+
+union	GATE-city
+city	GATE-city
+,	O
+mo	GATE-state
+43733	GATE-zip code
+
+medical	O
+record	O
+#	O
+:	O
+149-05-69	GATE-medical record
+
+re	O
+:	O
+branch	GATE-patient
+,	GATE-patient
+earnest	GATE-patient
+
+hpi	O
+:	O
+59	GATE-age
+yo	O
+female	O
+who	O
+presents	O
+back	O
+to	O
+clinic	O
+with	O
+her	O
+
+22	GATE-street
+monterey	GATE-street
+avenue	GATE-street
+,	O
+cardiology	O
+service	O
+
+-	O
+admit	O
+to	O
+wsa	GATE-hospital
+team	O
+4	O
+,	O
+attending	O
+dr	O
+.	O
+
+___________________________________	O
+to761/1620	GATE-ID number
+
+sandoval	GATE-doctor
+,	O
+md	O
+pager	O
+#	O
+19360	GATE-phone number
+
+notes	O
+w/	O
+past	O
+diets	O
+difficult	O
+to	O
+be	O
+on	O
+b/c	O
+some	O
+high	O
+in	O
+na	O
+(	O
+atkins	GATE-organization
+he	O
+tried)	O
+and	O
+others	O
+not	O
+good	O
+for	O
+dm	O
+.	O
+
+social	O
+history	O
+:	O
+retired	O
+civil	GATE-profession
+engineer	GATE-profession
+,	O
+positive	O
+asbestos	O
+exposure;	O
+quit	O
+smoking	O
+30	O
+years	O
+ago;	O
+no	O
+etoh	O
+or	O
+illicits	O
+
+her	O
+daughter	O
+,	O
+uber	GATE-patient
+,	O
+in	O
+vietnam	GATE-country
+may	O
+come	O
+back	O
+for	O
+the	O
+holidays	O
+.	O
+
+fb59	GATE-username
+d	O
+:	O
+07/20/83	GATE-date
+
+(385)	GATE-fax
+031-7905	GATE-fax
+
+interrogation	O
+today	O
+of	O
+his	O
+medtronic	O
+kappa	O
+cte	GATE-device
+226	GATE-device
+pacemaker	O
+reveals	O
+that	O
+his	O
+underlying	O
+rhythm	O
+is	O
+sinus	O
+tachycardia	O
+with	O
+intact	O
+av	O
+conduction	O
+.	O
+
+e-mail	O
+:	O
+iparedes@oachosp	GATE-email
+.	GATE-email
+

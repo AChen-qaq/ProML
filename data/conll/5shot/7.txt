@@ -1,0 +1,134 @@
+saqlain	GATE-person
+mushtaq	GATE-person
+b	O
+harris	GATE-person
+2	O
+
+wood	GATE-person
+,	O
+loren	GATE-person
+roberts	GATE-person
+,	O
+steve	GATE-person
+stricker	GATE-person
+,	O
+brian	GATE-person
+claar	GATE-person
+,	O
+russ	GATE-person
+cochran	GATE-person
+
+baghdad	GATE-location
+1996-08-31	O
+
+florida	GATE-organization
+at	O
+cincinnati	GATE-location
+
+obilic	GATE-organization
+4	O
+4	O
+0	O
+0	O
+10	O
+1	O
+12	O
+
+1.	O
+olga	GATE-person
+melnik	GATE-person
+(	O
+russia	GATE-location
+)	O
+23:13.3	O
+(	O
+0	O
+)	O
+
+only	O
+sheriat	GATE-miscellaneous
+(	O
+islamic	GATE-miscellaneous
+law	O
+)	O
+can	O
+end	O
+the	O
+war	O
+.	O
+"	O
+
+the	O
+u.s.	GATE-location
+defense	O
+officials	O
+said	O
+military	O
+flights	O
+to	O
+enforce	O
+no-fly	O
+zones	O
+in	O
+both	O
+northern	O
+and	O
+southern	O
+iraq	GATE-location
+doubled	O
+over	O
+the	O
+weekend	O
+.	O
+
+"	O
+the	O
+procedure	O
+of	O
+bankruptcy	O
+will	O
+be	O
+applied	O
+,	O
+"	O
+tass	GATE-organization
+quoted	O
+livshits	GATE-person
+as	O
+telling	O
+duma	GATE-organization
+deputies	O
+about	O
+norilsk	GATE-organization
+.	O
+
+profile	O
+of	O
+the	O
+winner	O
+of	O
+saturday	O
+'s	O
+women	O
+'s	O
+world	GATE-miscellaneous
+cup	GATE-miscellaneous
+super	O
+g	O
+race	O
+:	O
+
+result	O
+of	O
+saturday	O
+'s	O
+only	O
+spanish	GATE-miscellaneous
+
+freestyle	O
+skiing-world	GATE-miscellaneous
+cup	GATE-miscellaneous
+aerials	O
+results	O
+.	O
+

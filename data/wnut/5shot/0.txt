@@ -1,0 +1,374 @@
+and	O
+i	O
+'	O
+d	O
+disagree	O
+w	O
+/	O
+@	O
+edlothiad	GATE-person
+'	O
+s	O
+response	O
+-	O
+it	O
+is	O
+absolutely	O
+based	O
+more	O
+on	O
+myth	O
+than	O
+sci-fi	O
+concepts	O
+-	O
+but	O
+,	O
+ultimately	O
+,	O
+that	O
+does	O
+n	O
+'	O
+t	O
+matter	O
+since	O
+valorum	GATE-person
+is	O
+correct	O
+:	O
+)	O
+
+"	O
+dodge	GATE-product
+cuda	GATE-product
+"	O
+.	O
+.	O
+.	O
+?	O
+
+hit	O
+like	O
+if	O
+u	O
+think	O
+its	O
+like	O
+a	O
+hollywood	GATE-location
+teaser	O
+.	O
+.	O
+.	O
+.	O
+
+i	O
+'	O
+m	O
+looking	O
+at	O
+my	O
+casio	GATE-product
+and	O
+sighing	O
+disappointedly	O
+.	O
+
+does	O
+it	O
+work	O
+on	O
+5	GATE-product
+c	GATE-product
+
+love	O
+lynda	GATE-person
+.	O
+
+tonight	O
+at	O
+10	O
+on	O
+kode	GATE-creative work
+action	GATE-creative work
+12	GATE-creative work
+news	GATE-creative work
+.	O
+#	O
+kode	GATE-creative work
+12	GATE-creative work
+https://t.co/ad6ruiyr5m	O
+
+itt	O
+:	O
+mutual	O
+respect	O
+between	O
+tottenham	GATE-group
+and	O
+chelsea	GATE-group
+fans	O
+and	O
+everyone	O
+else	O
+shitting	O
+on	O
+giroud	GATE-person
+.	O
+
+original	O
+post	O
+:	O
+[	O
+andy	GATE-person
+carroll	GATE-person
+goal	O
+vs	O
+crystal	GATE-group
+palace	GATE-group
+(	O
+2	O
+-	O
+0	O
+)	O
+]	O
+(	O
+https://www.reddit.com/r/soccer/comments/5ny9tj/andy_carroll_goal_vs_crystal_palace20/	O
+)	O
+
+just	O
+one	O
+word	O
+.	O
+.	O
+.	O
+awesome	O
+!	O
+like	O
+always	O
+,	O
+thanks	O
+zac	GATE-group
+brown	GATE-group
+band	GATE-group
+!	O
+
+which	O
+sci-	O
+fi	O
+work	O
+introduced	O
+the	O
+idea	O
+of	O
+"	O
+touchscreen	GATE-product
+used	O
+by	O
+fingers	O
+"	O
+?	O
+
+do	O
+lekku	GATE-group
+grow	O
+with	O
+age	O
+?	O
+
+rt	O
+@	O
+v	O
+_	O
+of	O
+_	O
+europe	GATE-location
+:	O
+europe	GATE-location
+'	O
+s	O
+most	O
+horrible	O
+person	O
+is	O
+in	O
+the	O
+white	GATE-location
+house	GATE-location
+.	O
+the	O
+damage	O
+she	O
+'	O
+s	O
+done	O
+to	O
+her	O
+country	O
+and	O
+our	O
+continent	O
+is	O
+unpr	O
+…	O
+
+does	O
+using	O
+oauth	GATE-product
+behind	O
+firewall	O
+/	O
+closed	O
+ports	O
+requires	O
+proxy	O
+
+wishing	O
+it	O
+release	O
+in	O
+indonesia	GATE-location
+
+please	O
+use	O
+mathjax	GATE-product
+to	O
+format	O
+mathematical	O
+expressions	O
+.	O
+to	O
+learn	O
+more	O
+about	O
+mathjax	GATE-product
+,	O
+please	O
+read	O
+[	O
+mathjax	GATE-creative work
+basic	GATE-creative work
+tutorial	GATE-creative work
+and	GATE-creative work
+quick	GATE-creative work
+reference	GATE-creative work
+]	O
+(	O
+http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference	O
+)	O
+.	O
+
+&	O
+gt	O
+;	O
+it	O
+'	O
+s	O
+the	O
+body	O
+of	O
+a	O
+2	O
+time	O
+super	GATE-corporation
+bowl	GATE-corporation
+mvp	O
+,	O
+goddammit	O
+.	O
+
+need	O
+the	O
+xman	GATE-creative work
+video	GATE-creative work
+with	O
+that	O
+sexy	O
+girl	O
+tho	O
+!	O
+the	O
+one	O
+that	O
+read	O
+your	O
+fucked	O
+up	O
+mind	O
+!	O
+
+#	O
+trapmusic	O
+#	O
+radio	O
+instant	O
+party	O
+!	O
+-	O
+horizons	GATE-corporation
+https://t.co/yjsuuaptjx	O
+
+you	O
+do	O
+realize	O
+this	O
+was	O
+published	O
+by	O
+cbc	GATE-corporation
+manitoba	GATE-corporation
+.	O
+
+frugaliscious	O
+:	O
+it	O
+'	O
+s	O
+arri	GATE-creative work
+'	GATE-creative work
+s	GATE-creative work
+playtime	GATE-creative work
+tv	GATE-creative work
+:	GATE-creative work
+how	GATE-creative work
+to	GATE-creative work
+start	GATE-creative work
+the	GATE-creative work
+fisher-	GATE-creative work
+p	GATE-creative work
+.	O
+.	O
+.	O
+https://t.co/rsiowfoswy	O
+
+nothing	GATE-corporation
+but	GATE-corporation
+crap	GATE-corporation
+news	GATE-corporation
+strikes	O
+again	O
+
+@	O
+huffpostweird	GATE-corporation
+there	O
+'	O
+s	O
+nothing	O
+"	O
+hilarious	O
+"	O
+about	O
+it	O
+.	O
+try	O
+doing	O
+some	O
+actual	O
+research	O
+on	O
+the	O
+subject	O
+.	O
+https://t.co/skmrsuz98e	O
+

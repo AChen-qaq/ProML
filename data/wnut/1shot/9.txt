@@ -1,0 +1,85 @@
+https	O
+:	O
+/	O
+/	O
+wn	O
+.	O
+nr	O
+/	O
+ablfwz	O
+enter	O
+to	O
+win	O
+a	O
+free	O
+s	GATE-product
+8	GATE-product
+here	O
+:	O
+)	O
+
+casey	GATE-person
+has	O
+officially	O
+reached	O
+spider-man	GATE-person
+status	O
+.	O
+
+rt	O
+@	O
+sslah	O
+771	O
+:	O
+she	O
+'	O
+s	O
+beautiful	O
+!	O
+(	O
+842	O
+)	O
+#	O
+swallavideo	GATE-creative work
+https://t.co/ggbs2kidpa	O
+
+we	O
+did	O
+it	O
+reddit	GATE-group
+!	O
+
+"	O
+do	O
+you	O
+think	O
+that	O
+teens	O
+thought	O
+chik-	GATE-corporation
+fil-	GATE-corporation
+a	GATE-corporation
+was	O
+lit	O
+?	O
+"	O
+"	O
+i	O
+mean	O
+,	O
+it	O
+depends	O
+on	O
+how	O
+lit	O
+homophobia	O
+is	O
+.	O
+"	O
+
+where	O
+'	O
+s	O
+kishan	GATE-location
+?	O
+

@@ -1,0 +1,123 @@
+quijano	GATE-patient
+,	GATE-patient
+baylee	GATE-patient
+853-62-51-4	GATE-medical record
+visit	O
+date	O
+:	O
+01/15/75	GATE-date
+
+i	O
+spoke	O
+with	O
+hospitalist	O
+,	O
+dr	O
+bates	GATE-doctor
+about	O
+patient	O
+on	O
+2/18	GATE-date
+.	O
+
+history	O
+of	O
+present	O
+illness	O
+:	O
+the	O
+patient	O
+is	O
+a	O
+59	GATE-age
+-year-old	O
+male	O
+
+dejesus	GATE-patient
+to	O
+the	O
+erie	GATE-hospital
+county	GATE-hospital
+arrhythmia	O
+service	O
+for	O
+consideration	O
+of	O
+catheter	O
+ablation	O
+of	O
+atrial	O
+fibrillation	O
+.	O
+
+white	GATE-city
+hall	GATE-city
+,	O
+mn	GATE-state
+76715	GATE-zip code
+65856594	GATE-medical record
+
+46	GATE-street
+marshall	GATE-street
+street	GATE-street
+
+___________________________________	O
+cq774/2253	GATE-ID number
+
+vi65	GATE-username
+
+pager	O
+#	O
+:	O
+98768	GATE-phone number
+
+occupation	O
+:	O
+customs	GATE-profession
+broker	GATE-profession
+
+occupation	O
+:	O
+retired	O
+,	O
+air	GATE-profession
+pilot	GATE-profession
+for	O
+s3	GATE-organization
+graphics	GATE-organization
+
+honduran	GATE-country
+immigrant	O
+.	O
+
+e-mail	O
+:	O
+iparedes@oachosp	GATE-email
+.	GATE-email
+
+interrogation	O
+today	O
+of	O
+his	O
+medtronic	O
+kappa	O
+qq	GATE-device
+626	GATE-device
+pacemaker	O
+reveals	O
+that	O
+his	O
+underlying	O
+rhythm	O
+is	O
+sinus	O
+tachycardia	O
+with	O
+intact	O
+av	O
+conduction	O
+.	O
+
+(385)	GATE-fax
+031-7905	GATE-fax
+

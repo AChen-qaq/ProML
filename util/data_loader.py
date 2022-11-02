@@ -109,6 +109,15 @@ class FewShotNERDatasetWithRandomSampling(data.Dataset):
                 classes += sample_classes
                 samplelines = []
                 index += 1
+
+        if len(samplelines) != 0:
+            sample = Sample(samplelines)
+            samples.append(sample)
+            sample_classes = sample.get_tag_class()
+            self.__insert_sample__(index, sample_classes)
+            classes += sample_classes
+            samplelines = []
+            index += 1
         classes = list(set(classes))
         return samples, classes
 
@@ -364,13 +373,14 @@ class EasySamplerForSupport(FewShotNERDatasetWithRandomSampling):
        super(EasySamplerForSupport, self).__init__(filepath, tokenizer, N, K, Q, max_length, ignore_label_id=-1)
     
     def __getitem__(self, index):
-        support_idx = [index]
+        support_idx = list(range(len(self.samples)))
         target_classes = list(set([ x for idx in support_idx for x in self.samples[idx].get_class_count().keys() ]))
         # target_classes, support_idx, query_idx = self.sampler.__next__()
         # add 'O' and make sure 'O' is labeled 0
         distinct_tags = ['O'] + target_classes
-        # self.tag2label = {tag:idx for idx, tag in enumerate(distinct_tags)}
-        # self.label2tag = {idx:tag for idx, tag in enumerate(distinct_tags)}
+        print(distinct_tags, flush=True)
+        self.tag2label = {tag:idx for idx, tag in enumerate(distinct_tags)}
+        self.label2tag = {idx:tag for idx, tag in enumerate(distinct_tags)}
         
         # support_set = self.__populate__(support_idx)
         support_set = query_set = self.__populate__(support_idx, savelabeldic=True)
@@ -378,7 +388,7 @@ class EasySamplerForSupport(FewShotNERDatasetWithRandomSampling):
 
     def __len__(self):
         # print('hello', len(self.samples))
-        return len(self.samples)
+        return 1
 
 class FewShotNERDataset(FewShotNERDatasetWithRandomSampling):
     def __init__(self, filepath, tokenizer, max_length, ignore_label_id=-1, no_shuffle=False):

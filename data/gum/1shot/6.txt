@@ -1,0 +1,95 @@
+what	O
+is	O
+heaven	GATE-organization
+sent	GATE-organization
+gaming	GATE-organization
+?	O
+
+this	GATE-event
+will	O
+cut	O
+down	O
+on	O
+some	O
+of	O
+the	GATE-abstract
+racket	GATE-abstract
+,	O
+but	O
+you	GATE-person
+'re	O
+still	O
+going	O
+to	O
+hear	O
+them	GATE-object
+.	O
+
+driving	O
+into	O
+the	GATE-place
+city	GATE-place
+centre	GATE-place
+itself	GATE-place
+is	O
+something	O
+to	O
+avoid	O
+.	O
+
+hold	O
+the	GATE-animal
+bird	GATE-animal
+down	O
+gently	O
+with	O
+one	GATE-object
+hand	GATE-object
+.	O
+
+the	GATE-animal
+mice	GATE-animal
+will	O
+sniff	O
+the	GATE-abstract
+smell	GATE-abstract
+of	GATE-abstract
+cat	GATE-abstract
+urine	GATE-abstract
+and	O
+clear	O
+off	O
+in	O
+a	GATE-time
+jiffy	GATE-time
+.	O
+
+bottles	O
+of	O
+"	GATE-substance
+skittled	GATE-substance
+"	GATE-substance
+
+keep	O
+the	GATE-substance
+soil	GATE-substance
+moist	O
+until	O
+the	GATE-plant
+seeds	GATE-plant
+germinate	O
+.	O
+
+the	GATE-organization
+greek	GATE-organization
+orthodox	GATE-organization
+church	GATE-organization
+estimates	O
+that	GATE-quantity
+number	GATE-quantity
+is	O
+closer	O
+to	O
+40,000	O
+.	O
+

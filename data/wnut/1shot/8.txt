@@ -1,0 +1,77 @@
+[	O
+/	O
+r	O
+/	O
+ireland	GATE-location
+]	O
+(	O
+https://www.reddit.com/r/ireland/	O
+)	O
+-	O
+&	O
+gt	O
+;	O
+[	O
+/	O
+r	O
+/	O
+iceland	GATE-location
+]	O
+(	O
+https://www.reddit.com/r/iceland/	O
+)	O
+
+&	O
+gt	O
+;	O
+it	O
+'	O
+s	O
+the	O
+body	O
+of	O
+a	O
+2	O
+time	O
+super	GATE-corporation
+bowl	GATE-corporation
+mvp	O
+,	O
+goddammit	O
+.	O
+
+this	O
+is	O
+like	O
+a	O
+2017	O
+version	O
+of	O
+a	O
+busta	GATE-person
+rhymes	GATE-person
+video	O
+,	O
+especially	O
+around	O
+2	O
+:	O
+42	O
+
+my	O
+lyft	GATE-product
+is	O
+lit	O
+!	O
+
+should	O
+'	O
+ve	O
+played	O
+rickyxans	GATE-group
+remix	O
+of	O
+dolphin	GATE-creative work
+on	GATE-creative work
+wheels	GATE-creative work
+

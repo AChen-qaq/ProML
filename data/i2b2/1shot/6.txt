@@ -1,0 +1,145 @@
+dv	O
+:	O
+03/06/87	GATE-date
+
+brother-	O
+died	O
+in	O
+50's	GATE-age
+of	O
+cad	O
+,	O
+was	O
+an	O
+alcoholic	O
+
+sh	O
+:	O
+lives	O
+in	O
+ardmore	GATE-city
+with	O
+son	O
+.	O
+
+dictated	O
+by	O
+:	O
+henry	GATE-doctor
+phelps	GATE-doctor
+,	O
+pa	O
+
+worked	O
+in	O
+design	GATE-profession
+until	O
+retiring	O
+age	O
+62	GATE-age
+.	O
+
+___________________________________	O
+xw277/90683	GATE-ID number
+
+patient	O
+name	O
+:	O
+slater	GATE-patient
+,	GATE-patient
+owen	GATE-patient
+;	O
+mrn	O
+:	O
+8635779	GATE-medical record
+
+rhineland	GATE-hospital
+emergency	O
+dept	O
+visit	O
+
+av55	GATE-username
+
+pleasant	O
+gentleman	O
+of	O
+german	GATE-country
+extraction	O
+,	O
+sitting	O
+in	O
+a	O
+wheechair	O
+.	O
+
+thank	O
+you	O
+,	O
+please	O
+page	O
+internal	O
+medicine	O
+#	O
+42721	GATE-phone number
+with	O
+any	O
+questions	O
+.	O
+
+former	O
+:	O
+wesley	GATE-doctor
+carroll	GATE-doctor
+md	O
+,	O
+seminole	GATE-city
+,	O
+ri	GATE-state
+
+social	O
+history	O
+:	O
+he	O
+works	O
+as	O
+a	O
+web	GATE-profession
+developer	GATE-profession
+in	O
+audiovox	GATE-organization
+.	O
+
+96	GATE-street
+clergy	GATE-street
+street	GATE-street
+
+interrogation	O
+today	O
+of	O
+his	O
+medtronic	O
+kappa	O
+cte	GATE-device
+226	GATE-device
+pacemaker	O
+reveals	O
+that	O
+his	O
+underlying	O
+rhythm	O
+is	O
+sinus	O
+tachycardia	O
+with	O
+intact	O
+av	O
+conduction	O
+.	O
+
+org	GATE-email
+
+(385)	GATE-fax
+031-7905	GATE-fax
+
+26822	GATE-zip code
+

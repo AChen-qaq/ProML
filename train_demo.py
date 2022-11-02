@@ -115,6 +115,8 @@ def main():
     parser.add_argument('--val-classes', type=int, default=50)
     parser.add_argument('--test-classes', type=int, default=50)
     parser.add_argument('--sample-support-with-dir', type=str)
+    parser.add_argument('--use-support', type=str)
+    parser.add_argument('--use-query', type=str)
 
     parser.add_argument('--name', type=str, required=True)
 
@@ -139,10 +141,47 @@ def main():
     print('loading tokenizer...')
     pretrain_ckpt = opt.pretrain_ckpt or 'bert-base-uncased'
 
-    tokenizer = BertTokenizer.from_pretrained('bert-base-uncased', mirror='tuna')
+    tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
 
     print('loading data...')
-    if not opt.use_sampled_data:
+
+    if opt.use_onto_split is not None:
+        opt.train = 'data/ontoNotes/__train_{}.txt'.format(opt.use_onto_split)
+        opt.test = 'data/ontoNotes/__test_{}.txt'.format(opt.use_onto_split)
+        opt.dev = 'data/ontoNotes/__dev_{}.txt'.format(opt.use_onto_split)
+        dataset_name = 'OntoNotes_{}'.format(opt.use_onto_split)
+
+    elif opt.use_ontonotes:
+        opt.train = 'data/ontoNotes/train.txt'
+        opt.test = 'data/ontoNotes/test.txt'
+        opt.dev = 'data/ontoNotes/dev.txt'
+        dataset_name = 'OntoNotes'
+
+    elif opt.use_wnut:
+        opt.train = 'data/ontoNotes/train.txt'
+        opt.dev = 'data/wnut-dev.txt'
+        opt.test = 'data/wnut-test.txt'
+        dataset_name = 'WNUT'
+
+    elif opt.use_conll2003:
+        opt.train = 'data/ontoNotes/train.txt'
+        opt.dev = 'data/conll-dev.txt'
+        opt.test = 'data/conll-test.txt'
+        dataset_name = 'CoNLL2003'
+
+    elif opt.use_i2b2:
+        opt.train = 'data/ontoNotes/train.txt'
+        opt.dev = 'data/i2b2-test.txt'
+        opt.test = 'data/i2b2-test.txt'
+        dataset_name = 'I2B2'
+
+    elif opt.use_gum:
+        opt.train = 'data/ontoNotes/train.txt'
+        opt.dev = 'data/gum-test.txt'
+        opt.test = 'data/gum-test.txt'
+        dataset_name = 'GUM'
+
+    elif not opt.use_sampled_data:
         opt.train = f'data/{opt.mode}/train.txt'
         opt.test = f'data/{opt.mode}/test.txt'
         opt.dev = f'data/{opt.mode}/dev.txt'
@@ -156,69 +195,40 @@ def main():
             os.system(f'bash data/download.sh episode-data')
             os.system('unzip -d data/ data/episode-data.zip')
 
-    if opt.use_onto_split is not None:
-        opt.train = 'data/ontoNotes/__train_{}.txt'.format(opt.use_onto_split)
-        opt.test = 'data/ontoNotes/__test_{}.txt'.format(opt.use_onto_split)
-        opt.dev = 'data/ontoNotes/__dev_{}.txt'.format(opt.use_onto_split)
-        dataset_name = 'OntoNotes_{}'.format(opt.use_onto_split)
-
-    if opt.use_ontonotes:
-        opt.train = 'data/ontoNotes/train.txt'
-        opt.test = 'data/ontoNotes/test.txt'
-        opt.dev = 'data/ontoNotes/dev.txt'
-        dataset_name = 'OntoNotes'
-
-    if opt.use_wnut:
-        opt.train = 'data/ontoNotes/train.txt'
-        opt.dev = 'data/wnut-dev.txt'
-        opt.test = 'data/wnut-test.txt'
-        dataset_name = 'WNUT'
-
-    if opt.use_conll2003:
-        opt.train = 'data/ontoNotes/train.txt'
-        opt.dev = 'data/conll-dev.txt'
-        opt.test = 'data/conll-test.txt'
-        dataset_name = 'CoNLL2003'
-
-    if opt.use_i2b2:
-        opt.train = 'data/ontoNotes/train.txt'
-        opt.dev = 'data/i2b2-test.txt'
-        opt.test = 'data/i2b2-test.txt'
-        dataset_name = 'I2B2'
-
-    if opt.use_gum:
-        opt.train = 'data/ontoNotes/train.txt'
-        opt.dev = 'data/gum-test.txt'
-        opt.test = 'data/gum-test.txt'
-        dataset_name = 'GUM'
-
-    train_data_loader = get_loader(opt.train, tokenizer,
-                                   N=trainN, K=trainK, Q=Q, batch_size=batch_size, max_length=max_length, ignore_index=opt.ignore_index, use_sampled_data=opt.use_sampled_data, no_shuffle=opt.no_shuffle)
-    val_data_loader = get_loader(opt.dev, tokenizer,
-                                 N=N, K=K, Q=Q, batch_size=batch_size, max_length=max_length, ignore_index=opt.ignore_index, use_sampled_data=opt.use_sampled_data, no_shuffle=opt.no_shuffle)
-    if opt.full_test:
-        extra_data_loader = get_loader(opt.test, tokenizer,
-                                    N=opt.totalN, K=K, Q=Q, batch_size=1, max_length=max_length, ignore_index=opt.ignore_index, use_sampled_data=opt.use_sampled_data, i2b2flag=opt.use_i2b2 or opt.use_gum, dataset_name=dataset_name, no_shuffle=opt.no_shuffle)
-        
-        test_data_loader_creator, test_data_set = get_loader(opt.test, tokenizer,
-                                                             N=N, K=K, Q=Q, batch_size=batch_size, max_length=max_length, ignore_index=opt.ignore_index, use_sampled_data=opt.use_sampled_data, full_test=True, no_shuffle=opt.no_shuffle)
-        test_data_loader = test_data_loader_creator, test_data_set
-    else:
+    if not opt.full_test:
+        train_data_loader = get_loader(opt.train, tokenizer,
+                                    N=trainN, K=trainK, Q=Q, batch_size=batch_size, max_length=max_length, ignore_index=opt.ignore_index, use_sampled_data=opt.use_sampled_data, no_shuffle=opt.no_shuffle)
+        val_data_loader = get_loader(opt.dev, tokenizer,
+                                    N=N, K=K, Q=Q, batch_size=batch_size, max_length=max_length, ignore_index=opt.ignore_index, use_sampled_data=opt.use_sampled_data, no_shuffle=opt.no_shuffle)
         test_data_loader = get_loader(opt.test, tokenizer,
                                       N=N, K=K, Q=Q, batch_size=batch_size, max_length=max_length, ignore_index=opt.ignore_index, use_sampled_data=opt.use_sampled_data, no_shuffle=opt.no_shuffle)
+    else :
+        train_data_loader = val_data_loader = None
+        extra_data_loader = get_loader(opt.use_support or opt.test, tokenizer,
+                                    N=opt.totalN, K=K, Q=Q, batch_size=1, max_length=max_length, ignore_index=opt.ignore_index, use_sampled_data=opt.use_sampled_data, i2b2flag=opt.use_i2b2 or opt.use_gum, dataset_name=dataset_name, no_shuffle=opt.no_shuffle, is_extra=True)
+        
+        test_data_loader_creator, test_data_set = get_loader(opt.use_query or opt.test, tokenizer,
+                                                             N=N, K=K, Q=Q, batch_size=1, max_length=max_length, ignore_index=opt.ignore_index, use_sampled_data=opt.use_sampled_data, full_test=True, no_shuffle=opt.no_shuffle)
+        test_data_loader = test_data_loader_creator, test_data_set
 
     if opt.sample_support_with_dir is not None:
+        os.makedirs(opt.sample_support_with_dir, exist_ok=True)
         assert opt.full_test
         for __, (support, not_used) in enumerate(extra_data_loader):
             if __ >= 10:
                 break
-            ret = []
-            for index in support['index']:
-                sample = test_data_set.samples[index]
-                ret.append(json.dumps({'text': sample.words, 'label': [
-                           tag.replace(' ', '_').replace('GATE', 'I') for tag in sample.tags]}))
-            with open(os.path.join(opt.sample_support_with_dir, '{}.json'.format(__)), 'w') as f:
-                f.write('\n'.join(ret))
+            # ret = []
+            # for index in support['index']:
+            #     sample = test_data_set.samples[index]
+            #     ret.append(json.dumps({'text': sample.words, 'label': [
+            #                tag.replace(' ', '_').replace('GATE', 'I') for tag in sample.tags]}))
+            # with open(os.path.join(opt.sample_support_with_dir, '{}.json'.format(__)), 'w') as f:
+            #     f.write('\n'.join(ret))
+
+            with open(os.path.join(opt.sample_support_with_dir, '{}.txt'.format(__)), 'w') as f:
+                f.write('\n\n'.join([test_data_set.samples[index].__str__() for index in support['index']]))
+                f.write('\n\n')
+
 
         return
 
