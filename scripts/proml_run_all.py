@@ -8,7 +8,7 @@ def run_all_FewNERD():
     script = 'python3 train_demo.py  --mode {mode} \
 --lr 3e-5 --batch_size {bsz} --trainN {trainN} --N {testN} --K {testK} --Q {testQ} \
 --train_iter 10000 --val_iter 500 --test_iter 5000 --val_step 1000 \
---max_length {mx_len} --model PromptNCA --seed {seed} --mix-rate {mix_rate} --topk {testK} --use_sampled_data --name RUN_ALL_ProML_FewNERD_{exp_type}_seed={seed}_mix-rate={mix_rate} --proj-dim 128 --trainK {trainK} > outputs/run_all_logs/RUN_ALL_ProML_FewNERD_{exp_type}_seed={seed}_mix-rate={mix_rate}'
+--max_length {mx_len} --model ProML --seed {seed} --mix-rate {mix_rate} --topk {testK} --use_sampled_data --name RUN_ALL_ProML_FewNERD_{exp_type}_seed={seed}_mix-rate={mix_rate} --proj-dim 128 --trainK {trainK} > outputs/run_all_logs/RUN_ALL_ProML_FewNERD_{exp_type}_seed={seed}_mix-rate={mix_rate}'
 
 
     scripts_list = []
@@ -34,7 +34,7 @@ def run_all_OntoNotes():
     script = 'python3 train_demo.py  --mode {mode} \
 --lr 3e-5 --batch_size {bsz} --trainN {trainN} --N {testN} --K {testK} --Q {testQ} \
 --train_iter 10000 --val_iter 500 --test_iter 5000 --val_step 1000 \
---max_length {mx_len} --model PromptNCA --seed {seed} --mix-rate {mix_rate} --topk {testK} --name RUN_ALL_ProML_OntoNotes_{exp_type}_seed={seed}_mix-rate={mix_rate} --use-onto-split {label_set} --proj-dim 128 --trainK {trainK} > outputs/run_all_logs/RUN_ALL_ProML_OntoNotes_{exp_type}_seed={seed}_mix-rate={mix_rate}'
+--max_length {mx_len} --model ProML --seed {seed} --mix-rate {mix_rate} --topk {testK} --name RUN_ALL_ProML_OntoNotes_{exp_type}_seed={seed}_mix-rate={mix_rate} --use-onto-split {label_set} --proj-dim 128 --trainK {trainK} > outputs/run_all_logs/RUN_ALL_ProML_OntoNotes_{exp_type}_seed={seed}_mix-rate={mix_rate}'
 
 
     scripts_list = []
@@ -65,7 +65,7 @@ def run_all_DomainTransfer():
     script = 'python3 train_demo.py  --mode {mode} \
 --lr 3e-5 --batch_size {bsz} --trainN {trainN} --N {testN} --K {testK} --Q {testQ} \
 --train_iter 10000 --val_iter 500 --test_iter 5000 --val_step 1000 \
---max_length {mx_len} --model PromptNCA --seed {seed} --mix-rate {mix_rate} --topk {testK} --name RUN_ALL_ProML_OntoNotes_DomainTransferPretrained_{exp_type}_seed={seed}_mix-rate={mix_rate} --use-ontonotes --proj-dim 128 --trainK {trainK} > outputs/run_all_logs/RUN_ALL_ProML_OntoNotes_DomainTransferPretrained_{exp_type}_seed={seed}_mix-rate={mix_rate}'
+--max_length {mx_len} --model ProML --seed {seed} --mix-rate {mix_rate} --topk {testK} --name RUN_ALL_ProML_OntoNotes_DomainTransferPretrained_{exp_type}_seed={seed}_mix-rate={mix_rate} --use-ontonotes --proj-dim 128 --trainK {trainK} > outputs/run_all_logs/RUN_ALL_ProML_OntoNotes_DomainTransferPretrained_{exp_type}_seed={seed}_mix-rate={mix_rate}'
     scripts_list = []
 
     for seed in range(1):
@@ -84,7 +84,7 @@ def OntoNotesEval():
     script = 'python3 train_demo.py  --mode {mode} \
 --lr 3e-5 --batch_size {bsz} --trainN {trainN} --N {testN} --K {testK} --Q {testQ} \
 --train_iter 10000 --val_iter 500 --test_iter 5000 --val_step 1000 \
---max_length {mx_len} --model PromptNCA --seed {seed} --mix-rate {mix_rate} --topk 1 --name RUN_ALL_ProML_OntoNotes_{exp_type}_seed={seed}_mix-rate={mix_rate} --only_test --full-test --load_ckpt checkpoint/RUN_ALL_ProML_OntoNotes_{exp_type}_seed={seed}_mix-rate={mix_rate}.pth.tar --use-onto-split {label_set} --proj-dim 128 --trainK {trainK} > outputs/run_all_logs/TagExtensionEval/RUN_ALL_ProML_OntoNotes_{exp_type}_seed={seed}_mix-rate={mix_rate}_FULLTESTEVAL'
+--max_length {mx_len} --model ProML --seed {seed} --mix-rate {mix_rate} --topk 1 --name RUN_ALL_ProML_OntoNotes_{exp_type}_seed={seed}_mix-rate={mix_rate} --only_test --full-test --load_ckpt checkpoint/RUN_ALL_ProML_OntoNotes_{exp_type}_seed={seed}_mix-rate={mix_rate}.pth.tar --use-onto-split {label_set} --proj-dim 128 --trainK {trainK} > outputs/run_all_logs/TagExtensionEval/RUN_ALL_ProML_OntoNotes_{exp_type}_seed={seed}_mix-rate={mix_rate}_FULLTESTEVAL'
     scripts_list = []
     for data_split, totalN in zip(['A', 'B', 'C'], [6, 6, 6]):
         for seed in range(1):
@@ -101,7 +101,7 @@ def DomainTransferEval():
     script = 'python3 train_demo.py  --mode {mode} \
 --lr 3e-5 --batch_size {bsz} --trainN {trainN} --N {testN} --K {testK} --Q {testQ} \
 --train_iter 10000 --val_iter 500 --test_iter 5000 --val_step 1000 \
---max_length {mx_len} --model PromptNCA --eval-with-finetune --seed {seed} --mix-rate {mix_rate} --totalN {totalN} --eval-mix-rate {eval_mix_rate} --topk 1 --name RUN_ALL_ProML_OntoNotes_DomainTransferPretrained_{exp_type}_seed={seed}_mix-rate={mix_rate} --proj-dim 128 --trainK {trainK} --only_test --full-test {arg_dataset} --load_ckpt=checkpoint/RUN_ALL_ProML_OntoNotes_DomainTransferPretrained_{exp_type}_seed={seed}_mix-rate={mix_rate}.pth.tar > outputs/run_all_logs/DomainTransferEval/RUN_ALL_ProML_OntoNotes_DomainTransferPretrained_{exp_type}_seed={seed}_mix-rate={mix_rate}_eval-mix-rate={eval_mix_rate}_FULLTESTEVAL_{targetDomain}'
+--max_length {mx_len} --model ProML --eval-with-finetune --seed {seed} --mix-rate {mix_rate} --totalN {totalN} --eval-mix-rate {eval_mix_rate} --topk 1 --name RUN_ALL_ProML_OntoNotes_DomainTransferPretrained_{exp_type}_seed={seed}_mix-rate={mix_rate} --proj-dim 128 --trainK {trainK} --only_test --full-test {arg_dataset} --load_ckpt=checkpoint/RUN_ALL_ProML_OntoNotes_DomainTransferPretrained_{exp_type}_seed={seed}_mix-rate={mix_rate}.pth.tar > outputs/run_all_logs/DomainTransferEval/RUN_ALL_ProML_OntoNotes_DomainTransferPretrained_{exp_type}_seed={seed}_mix-rate={mix_rate}_eval-mix-rate={eval_mix_rate}_FULLTESTEVAL_{targetDomain}'
     scripts_list = []
     for targetDomain, arg_dataset, totalN in zip(['CoNLL', 'WNUT', 'I2B2', 'GUM'], ['--use-conll2003', '--use-wnut', '--use-i2b2', '--use-gum'], [4, 6, 19, 11]):
         for seed in range(1):
@@ -235,8 +235,9 @@ if __name__ == '__main__':
     
     # print(opt.start, opt.end)
     scripts = run_all_FewNERD() + run_all_OntoNotes() + run_all_DomainTransfer()
-    scripts = DomainTransferEval()
-    scripts = run_all_DomainTransfer()
+    # scripts = DomainTransferEval()
+    # scripts = run_all_DomainTransfer()
+    # scripts = run_all_FewNERD()
     print(len(scripts))
     parser = argparse.ArgumentParser()
     parser.add_argument('--device', type=str, default='0')
@@ -250,9 +251,9 @@ if __name__ == '__main__':
         print(script)
         subprocess.call(script, shell=True)
 
-    compute_stat_FewNERD()
-    compute_stat_OntoNotes()
-    compute_stat_DomainTransfer()
+    # compute_stat_FewNERD()
+    # compute_stat_OntoNotes()
+    # compute_stat_DomainTransfer()
 
 
 

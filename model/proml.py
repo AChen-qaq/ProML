@@ -10,7 +10,7 @@ sys.path.append('..')
 
 
 
-class PromptNCA(util.framework.FewShotNERModel):
+class ProML(util.framework.FewShotNERModel):
     def __init__(self, word_encoder, dot=False, ignore_index=-1, proj_dim=32, mix_rate=0.5, topk=1):
         util.framework.FewShotNERModel.__init__(
             self, word_encoder, ignore_index=ignore_index

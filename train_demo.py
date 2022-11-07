@@ -5,7 +5,7 @@ from util.word_encoder import BERTWordEncoder
 from model.proto import Proto
 from model.nnshot import NNShot
 from model.container import Container
-from model.prompt_nca import PromptNCA
+from model.proml import ProML
 from model.supervised import TransferBERT
 import sys
 import torch
@@ -92,23 +92,22 @@ def main():
     parser.add_argument('--use_sgd_for_bert', action='store_true',
                         help='use SGD instead of AdamW for BERT.')
 
-    parser.add_argument('--proj-dim', type=int, default=32)
+    parser.add_argument('--proj-dim', type=int, default=32, help='the dimension of gaussian embedding')
     parser.add_argument('--mask-rate', type=float)
 
-    parser.add_argument('--eval-with-finetune', action='store_true')
+    parser.add_argument('--eval-with-finetune', action='store_true', help='finetune on support set')
     parser.add_argument('--visualize', action='store_true')
-    parser.add_argument('--use-onto-split', type=str, choices=['A', 'B', 'C'])
-    parser.add_argument('--use-wnut', action='store_true')
-    parser.add_argument('--use-ontonotes', action='store_true')
-    parser.add_argument('--use-conll2003', action='store_true')
-    parser.add_argument('--use-i2b2', action='store_true')
-    parser.add_argument('--use-gum', action='store_true')
-    parser.add_argument('--full-test', action='store_true')
-    parser.add_argument('--totalN', type=int, default=5)
-    parser.add_argument('--finetuning-mix-rate', action='store_true')
-    parser.add_argument('--mix-rate', type=float, default=0.5)
-    parser.add_argument('--eval-mix-rate', type=float)
-    parser.add_argument('--topk', type=int, default=1)
+    parser.add_argument('--use-onto-split', type=str, choices=['A', 'B', 'C'], help='flag for OntoNotesABC splits')
+    parser.add_argument('--use-wnut', action='store_true', help='flag for WNUT')
+    parser.add_argument('--use-ontonotes', action='store_true', help='flag for OntoNotes')
+    parser.add_argument('--use-conll2003', action='store_true', help='flag for CoNLL 2003')
+    parser.add_argument('--use-i2b2', action='store_true', help='flag for I2B2')
+    parser.add_argument('--use-gum', action='store_true', help='flag for GUM')
+    parser.add_argument('--full-test', action='store_true', help='run test in low-resource evaluation mode')
+    parser.add_argument('--totalN', type=int, default=5, help='total N in support set used in low-resource evaluation')
+    parser.add_argument('--mix-rate', type=float, default=0.5, help='the weighted averaging hyperparameter for ProML')
+    parser.add_argument('--eval-mix-rate', type=float, help='the weighted averaging hyperparameter for ProML used in evalution')
+    parser.add_argument('--topk', type=int, default=1, help='KNN in inference')
     parser.add_argument('--output-file', type=str)
     parser.add_argument('--no-shuffle', action='store_true')
     parser.add_argument('--train-classes', type=int, default=50)
@@ -267,9 +266,9 @@ def main():
         framework = FewShotNERFramework(train_data_loader, val_data_loader, test_data_loader, N=opt.N, tau=opt.tau, train_fname=opt.train,
                                         viterbi=False, use_sampled_data=opt.use_sampled_data, contrast=True, extra_data_loader=extra_data_loader if opt.full_test else None)
 
-    elif model_name == 'PromptNCA':
-        print('use prompt_NCA')
-        model = PromptNCA(word_encoder, dot=opt.dot, ignore_index=opt.ignore_index,
+    elif model_name == 'ProML':
+        print('use ProML')
+        model = ProML(word_encoder, dot=opt.dot, ignore_index=opt.ignore_index,
                           proj_dim=opt.proj_dim, mix_rate=opt.mix_rate, topk=opt.topk)
         framework = FewShotNERFramework(train_data_loader, val_data_loader, test_data_loader, N=opt.N, tau=opt.tau, train_fname=opt.train, viterbi=False,
                                         use_sampled_data=opt.use_sampled_data, contrast=True, extra_data_loader=extra_data_loader if opt.full_test else None, eval_topk=opt.topk, eval_mix_rate=opt.eval_mix_rate)
