@@ -1,11 +1,11 @@
 # ProML: Prompt-Based Metric Learning for Few-shot NER
 
-This repo contains the source code for our paper:  [**Prompt-Based Metric Learning for Few-shot NER**](https://openreview.net/pdf?id=wHt8UumYfGT).
+This repo contains the source code for our paper:  [**Prompt-Based Metric Learning for Few-shot NER**](https://arxiv.org/abs/2211.04337). 
 
 
 ## Requirements
 
-Run the following script to install the remaining dependencies,
+Run the following script to install all dependencies
 
 ```shell
 pip install -r requirements.txt
@@ -129,3 +129,16 @@ python3 train_demo.py \
 --train_iter 10000 --val_iter 500 --test_iter 5000 --val_step 1000 \
 --max_length 64 --model ProML --seed 0 --eval-mix-rate 0.7 --name RUN_ALL_ProML_OntoNotes_TagExtensionA1shot_seed=0_mix-rate=0.7 --only_test --full-test --load_ckpt checkpoint/RUN_ALL_ProML_OntoNotes_TagExtensionA1shot_seed=0_mix-rate=0.7.pth.tar --use-support data/ontoA/1shot/0.txt --use-query data/ontoNotes __test_A.txt --use_sampled_data --proj-dim 128
 ```
+
+## Citation
+Please cite us if ProML is useful in your work:
+```
+@inproceedings{Chen2022PromptBasedML,
+  title={Prompt-Based Metric Learning for Few-Shot NER},
+  author={Yanru Chen and Yanan Zheng and Zhilin Yang},
+  year={2022}
+}
+```
+
+## Acknowledgement
+Part of the code is developed based on [**Few-NERD: Not Only a Few-shot NER Dataset**](https://github.com/thunlp/Few-NERD). We appreciate all the contributors for making their code publicly available. They provide a basic few-shot NER framework together with a large-scale dataset, which saves us a lot of work.
