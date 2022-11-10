@@ -60,7 +60,9 @@ Or run `train_demo.py` with specified arguments to run a single experiment.
 An example of script for running experiment for Few-NERD INTRA 5-way 1-shot episode evaluation is given as below.
 
 ```shell
-python3 train_demo.py  --mode intra --lr 3e-5 --batch_size 4 --trainN 5 --N 5 --trainK 1 --K 1 --Q 1 --train_iter 10000 --val_iter 500 --test_iter 5000 --val_step 1000 --max_length 64 --model ProML --seed 0 --mix-rate 0.7 --use_sampled_data --name RUN_ALL_ProML_FewNERD_INTRA5way1shot_seed=0_mix-rate=0.7 --proj-dim 128
+python3 train_demo.py  --mode intra --lr 3e-5 --batch_size 4 --trainN 5 --N 5 --trainK 1 --K 1 --Q 1 \
+--train_iter 10000 --val_iter 500 --test_iter 5000 --val_step 1000 \
+--max_length 64 --model ProML --seed 0 --mix-rate 0.7 --use_sampled_data --name RUN_ALL_ProML_FewNERD_INTRA5way1shot_seed=0_mix-rate=0.7 --proj-dim 128
 ```
 
 Few-NERD dataset will be automatically downloaded and placed at `data/`. In the case that the links in `data/download.sh` are expired, you can visit their official website to access the dataset.
