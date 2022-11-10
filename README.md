@@ -53,6 +53,7 @@ Or run `train_demo.py` with specified arguments to run a single experiment.
 -- eval-mix-rate        the weighted averaging hyperparameter for ProML used in evalution, overrides the --mix-rate in ckpt
 -- topk                 inference with KNN
 -- eval-with-finetune   finetune on support set
+-- no-sep               no separator in prompts
 ```
 
 ### For Few-NERD Dataset

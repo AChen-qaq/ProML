@@ -937,7 +937,7 @@ class FewShotNERFramework:
         eval_iter = min(vis_iter, len(eval_dataset))
         X = []
         y = []
-
+        mask_rate = 0.8
         with torch.no_grad():
             it = 0
             while it + 1 < eval_iter:
@@ -966,26 +966,39 @@ class FewShotNERFramework:
 
                         emb_q = model.get_emb_query(query).detach().cpu().numpy()
                         lab_q = torch.cat(query['label']).cpu().numpy()
-                        mask = (lab_q > 0)
-                        emb_q = emb_q[mask]
-                        lab_q = lab_q[mask]
+                        # mask = (lab_q > 0)
+                        # emb_q = emb_q[mask]
+                        # lab_q = lab_q[mask]
                         # print(query['label2tag'], lab_q)
-                        tag_q = [query['label2tag'][0][a] for a in lab_q]
-                        
-                        X.append(emb_q)
+                        tag_q = [query['label2tag'][0][a] for a in lab_q[lab_q > 0]]
+                        X.extend(emb_q[lab_q > 0])
                         y.extend(tag_q)
+
+                        mask = np.random.random_sample(size=(len(lab_q),)) > mask_rate
+
+                        tag_q = [query['label2tag'][0][a] for a in lab_q[(lab_q == 0) * (mask == 1)]]
+                        X.extend(emb_q[(lab_q == 0) * (mask == 1)])
+                        y.extend(tag_q)
+
 
 
                         emb_s = model.get_emb_support(support).detach().cpu().numpy()
                         lab_s = torch.cat(support['label']).cpu().numpy()
-                        mask = (lab_s > 0)
-                        emb_s = emb_s[mask]
-                        lab_s = lab_s[mask]
+                        # mask = (lab_s > 0)
+                        # emb_s = emb_s[mask]
+                        # lab_s = lab_s[mask]
                         # print(query['label2tag'], lab_q)
-                        tag_s = [query['label2tag'][0][a] for a in lab_s]
+                        tag_s = [query['label2tag'][0][a] for a in lab_s[lab_s > 0]]
                         
-                        X.append(emb_s)
+                        X.extend(emb_s[lab_s > 0])
                         y.extend(tag_s)
+
+                        mask = np.random.random_sample(size=(len(lab_s),)) > mask_rate
+
+                        tag_s = [query['label2tag'][0][a] for a in lab_s[(lab_s == 0) * (mask == 1)]]
+                        X.extend(emb_s[(lab_s == 0) * (mask == 1)])
+                        y.extend(tag_s)
+
                     else:
                         assert 0
 
@@ -993,8 +1006,8 @@ class FewShotNERFramework:
                         break
                     it += 1
         
-        X = np.concatenate(X)
+        # X = np.concatenate(X)
         # y = np.concatenate(y)
-        print(X.shape, len(y))
+        # print(X, len(y))
         print(name)
         visualize(X, y, prefix=f'vis/{exp_name}_{part}_withoutO_')

@@ -67,7 +67,7 @@ class FewShotNERDatasetWithRandomSampling(data.Dataset):
     """
     Fewshot NER Dataset
     """
-    def __init__(self, filepath, tokenizer, N, K, Q, max_length, ignore_label_id=-1, i2b2flag=False, dataset_name=None, no_shuffle=False):
+    def __init__(self, filepath, tokenizer, N, K, Q, max_length, ignore_label_id=-1, i2b2flag=False, dataset_name=None, no_shuffle=False, no_sep=False):
         if not os.path.exists(filepath):
             print("[ERROR] Data file does not exist!")
             assert(0)
@@ -80,6 +80,7 @@ class FewShotNERDatasetWithRandomSampling(data.Dataset):
         self.max_length = max_length
         self.sampler = FewshotSampler(N, K, Q, self.samples, classes=self.classes, i2b2flag=i2b2flag, dataset_name=dataset_name, no_shuffle=no_shuffle)
         self.ignore_label_id = ignore_label_id
+        self.no_sep = no_sep
 
         print(filepath, len(self.classes), self.classes, flush=True)
 
@@ -135,7 +136,6 @@ class FewShotNERDatasetWithRandomSampling(data.Dataset):
 
     def construct_prompt_tanl(self, tokens, labels):
 
-
         tokens_tanl = []
         text_mask_tanl = []
 
@@ -148,13 +148,23 @@ class FewShotNERDatasetWithRandomSampling(data.Dataset):
                 # label_seq = self.label2tag[lst_tag].split('-')[-1]
                 label_seq = self.label2tag[lst_tag].replace('-', ' - ')
                 label_seq = label_seq.replace('/', ' / ')
-                tokens_tanl.extend(['|']+label_seq.split()+[']'])
-                text_mask_tanl.extend([0]+[-2]*len(label_seq.split())+[0])
-                label_tanl.extend([tag] * (len(label_seq.split()) + 2))
+                if self.no_sep:
+                    tokens_tanl.extend(label_seq.split())
+                    text_mask_tanl.extend([-2]*len(label_seq.split()))
+                    label_tanl.extend([tag] * len(label_seq.split()))
+                
+                else:
+
+                    tokens_tanl.extend(['|']+label_seq.split()+[']'])
+                    text_mask_tanl.extend([0]+[-2]*len(label_seq.split())+[0])
+                    label_tanl.extend([tag] * (len(label_seq.split()) + 2))
             if tag > 0 and (lst_tag is None or lst_tag != tag):
-                tokens_tanl.extend(['['])
-                text_mask_tanl.extend([0])
-                label_tanl.extend([tag])
+                if self.no_sep:
+                    pass
+                else:
+                    tokens_tanl.extend(['['])
+                    text_mask_tanl.extend([0])
+                    label_tanl.extend([tag])
             
             tokens_tanl.extend([ token ])
             text_mask_tanl.extend([ 1 ])
@@ -165,9 +175,14 @@ class FewShotNERDatasetWithRandomSampling(data.Dataset):
             # label_seq = self.label2tag[lst_tag].split('-')[-1]
             label_seq = self.label2tag[lst_tag].replace('-', ' - ')
             label_seq = label_seq.replace('/', ' / ')
-            tokens_tanl.extend(['|']+label_seq.split()+[']'])
-            text_mask_tanl.extend([0]+[-2]*len(label_seq.split())+[0])
-            label_tanl.extend([lst_tag] * (len(label_seq.split()) + 2))
+            if self.no_sep:
+                tokens_tanl.extend(label_seq.split())
+                text_mask_tanl.extend([-2]*len(label_seq.split()))
+                label_tanl.extend([tag] * len(label_seq.split()))
+            else:
+                tokens_tanl.extend(['|']+label_seq.split()+[']'])
+                text_mask_tanl.extend([0]+[-2]*len(label_seq.split())+[0])
+                label_tanl.extend([lst_tag] * (len(label_seq.split()) + 2))
 
 
         
@@ -177,10 +192,14 @@ class FewShotNERDatasetWithRandomSampling(data.Dataset):
 
         entities = [self.label2tag[opt].replace('-', ' - ').replace('/', ' / ') for opt in range(torch.max(torch.tensor(labels)) + 1)]
         
-
-        tokens_aug = ' , '.join(entities).split() + [':']
-        text_mask_aug = [0] * len(tokens_aug)
-        label_aug = labels
+        if self.no_sep:
+            tokens_aug = ' '.join(entities).split()
+            text_mask_aug = [0] * len(tokens_aug)
+            label_aug = labels
+        else:
+            tokens_aug = ' , '.join(entities).split() + [':']
+            text_mask_aug = [0] * len(tokens_aug)
+            label_aug = labels
         
         tokens_aug.extend(tokens)
         text_mask_aug.extend([1] * len(tokens))
@@ -391,7 +410,7 @@ class EasySamplerForSupport(FewShotNERDatasetWithRandomSampling):
         return 1
 
 class FewShotNERDataset(FewShotNERDatasetWithRandomSampling):
-    def __init__(self, filepath, tokenizer, max_length, ignore_label_id=-1, no_shuffle=False):
+    def __init__(self, filepath, tokenizer, max_length, ignore_label_id=-1, no_shuffle=False, no_sep=False):
         if not os.path.exists(filepath):
             print("[ERROR] Data file does not exist!")
             assert(0)
@@ -401,6 +420,7 @@ class FewShotNERDataset(FewShotNERDatasetWithRandomSampling):
         self.max_length = max_length
         self.ignore_label_id = ignore_label_id
         self.no_shuffle = no_shuffle
+        self.no_sep = no_sep
     
     def __load_data_from_file__(self, filepath):
         with open(filepath)as f:
@@ -536,18 +556,18 @@ def collate_fn_easy(data):
 
 
 def get_loader(filepath, tokenizer, N, K, Q, batch_size, max_length, 
-        num_workers=8, collate_fn=collate_fn, ignore_index=-1, use_sampled_data=True, full_test=False, i2b2flag=False, dataset_name=None, no_shuffle=False, is_extra=False):
+        num_workers=8, collate_fn=collate_fn, ignore_index=-1, use_sampled_data=True, full_test=False, i2b2flag=False, dataset_name=None, no_shuffle=False, is_extra=False, no_sep=False):
     # assert (not use_sampled_data) or (not full_test)
 
 
     if full_test:
         dataset = EasySampler(filepath, tokenizer, N, K, Q, max_length, ignore_label_id=ignore_index)
     elif not use_sampled_data:
-        dataset = FewShotNERDatasetWithRandomSampling(filepath, tokenizer, N, K, Q, max_length, ignore_label_id=ignore_index, i2b2flag=i2b2flag, dataset_name=dataset_name, no_shuffle=no_shuffle)
+        dataset = FewShotNERDatasetWithRandomSampling(filepath, tokenizer, N, K, Q, max_length, ignore_label_id=ignore_index, i2b2flag=i2b2flag, dataset_name=dataset_name, no_shuffle=no_shuffle, no_sep=no_sep)
     elif is_extra:
         dataset = EasySamplerForSupport(filepath, tokenizer, N, K, Q, max_length, ignore_label_id=ignore_index)
     else:
-        dataset = FewShotNERDataset(filepath, tokenizer, max_length, ignore_label_id=ignore_index, no_shuffle=no_shuffle)
+        dataset = FewShotNERDataset(filepath, tokenizer, max_length, ignore_label_id=ignore_index, no_shuffle=no_shuffle, no_sep=no_sep)
     
     def create_loader(dataset):
         data_loader = data.DataLoader(dataset=dataset,

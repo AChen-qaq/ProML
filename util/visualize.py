@@ -48,9 +48,13 @@ def visualize(X, y, prefix='vis/', save=True):
             else:
                 coarse, fine = label.split('-')
             mask = np.array([a==label for a in y])
+            
             print(coarse, fine, cnt[coarse])
             # plt.scatter(X_embedded[mask,0],X_embedded[mask,1], label=label, s=1, alpha=1,c=COLOR[coarse][cnt[coarse]],edgecolors=COLOR[coarse][0],linewidths=.1)
-            plt.scatter(X_embedded[mask,0], X_embedded[mask,1], label=label, s=1, color=col[coarse][cnt[coarse]])
+            if label != 'O':
+                plt.scatter(X_embedded[mask,0], X_embedded[mask,1], label=label, s=1, color=col[coarse][cnt[coarse]])
+            else:
+                plt.scatter(X_embedded[mask,0], X_embedded[mask,1], label=label, s=1, c='lightgrey')
             cnt[coarse] += 1
         # plt.legend()
         # plt.title(str(method))

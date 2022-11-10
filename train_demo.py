@@ -108,14 +108,15 @@ def main():
     parser.add_argument('--mix-rate', type=float, default=0.5, help='the weighted averaging hyperparameter for ProML')
     parser.add_argument('--eval-mix-rate', type=float, help='the weighted averaging hyperparameter for ProML used in evalution')
     parser.add_argument('--topk', type=int, default=1, help='KNN in inference')
-    parser.add_argument('--output-file', type=str)
+    parser.add_argument('--output-file', type=str, help='write inference results to file, only for low-resource evaluation')
     parser.add_argument('--no-shuffle', action='store_true')
-    parser.add_argument('--train-classes', type=int, default=50)
-    parser.add_argument('--val-classes', type=int, default=50)
-    parser.add_argument('--test-classes', type=int, default=50)
-    parser.add_argument('--sample-support-with-dir', type=str)
+    parser.add_argument('--train-classes', type=int, default=50, help='used for transferBERT baseline')
+    parser.add_argument('--val-classes', type=int, default=50, help='used for transferBERT baseline')
+    parser.add_argument('--test-classes', type=int, default=50, help='used for transferBERT baseline')
+    parser.add_argument('--sample-support-with-dir', type=str, help='only sample support set with a specified directory')
     parser.add_argument('--use-support', type=str)
     parser.add_argument('--use-query', type=str)
+    parser.add_argument('--no-sep', action='store_true', help='no separator in prompts')
 
     parser.add_argument('--name', type=str, required=True)
 
@@ -196,18 +197,18 @@ def main():
 
     if not opt.full_test:
         train_data_loader = get_loader(opt.train, tokenizer,
-                                    N=trainN, K=trainK, Q=Q, batch_size=batch_size, max_length=max_length, ignore_index=opt.ignore_index, use_sampled_data=opt.use_sampled_data, no_shuffle=opt.no_shuffle)
+                                    N=trainN, K=trainK, Q=Q, batch_size=batch_size, max_length=max_length, ignore_index=opt.ignore_index, use_sampled_data=opt.use_sampled_data, no_shuffle=opt.no_shuffle, no_sep=opt.no_sep)
         val_data_loader = get_loader(opt.dev, tokenizer,
-                                    N=N, K=K, Q=Q, batch_size=batch_size, max_length=max_length, ignore_index=opt.ignore_index, use_sampled_data=opt.use_sampled_data, no_shuffle=opt.no_shuffle)
+                                    N=N, K=K, Q=Q, batch_size=batch_size, max_length=max_length, ignore_index=opt.ignore_index, use_sampled_data=opt.use_sampled_data, no_shuffle=opt.no_shuffle, no_sep=opt.no_sep)
         test_data_loader = get_loader(opt.test, tokenizer,
-                                      N=N, K=K, Q=Q, batch_size=batch_size, max_length=max_length, ignore_index=opt.ignore_index, use_sampled_data=opt.use_sampled_data, no_shuffle=opt.no_shuffle)
+                                      N=N, K=K, Q=Q, batch_size=batch_size, max_length=max_length, ignore_index=opt.ignore_index, use_sampled_data=opt.use_sampled_data, no_shuffle=opt.no_shuffle, no_sep=opt.no_sep)
     else :
         train_data_loader = val_data_loader = None
         extra_data_loader = get_loader(opt.use_support or opt.test, tokenizer,
-                                    N=opt.totalN, K=K, Q=Q, batch_size=1, max_length=max_length, ignore_index=opt.ignore_index, use_sampled_data=opt.use_sampled_data, i2b2flag=opt.use_i2b2 or opt.use_gum, dataset_name=dataset_name, no_shuffle=opt.no_shuffle, is_extra=True)
+                                    N=opt.totalN, K=K, Q=Q, batch_size=1, max_length=max_length, ignore_index=opt.ignore_index, use_sampled_data=opt.use_sampled_data, i2b2flag=opt.use_i2b2 or opt.use_gum, dataset_name=dataset_name, no_shuffle=opt.no_shuffle, is_extra=True, no_sep=opt.no_sep)
         
         test_data_loader_creator, test_data_set = get_loader(opt.use_query or opt.test, tokenizer,
-                                                             N=N, K=K, Q=Q, batch_size=1, max_length=max_length, ignore_index=opt.ignore_index, use_sampled_data=opt.use_sampled_data, full_test=True, no_shuffle=opt.no_shuffle)
+                                                             N=N, K=K, Q=Q, batch_size=1, max_length=max_length, ignore_index=opt.ignore_index, use_sampled_data=opt.use_sampled_data, full_test=True, no_shuffle=opt.no_shuffle, no_sep=opt.no_sep)
         test_data_loader = test_data_loader_creator, test_data_set
 
     if opt.sample_support_with_dir is not None:
@@ -262,7 +263,7 @@ def main():
     elif model_name == 'container':
         print('use container')
         model = Container(word_encoder, dot=opt.dot, ignore_index=opt.ignore_index,
-                          gaussian_dim=opt.proj_dim, o_ambg=opt.o_ambg)
+                          gaussian_dim=opt.proj_dim)
         framework = FewShotNERFramework(train_data_loader, val_data_loader, test_data_loader, N=opt.N, tau=opt.tau, train_fname=opt.train,
                                         viterbi=False, use_sampled_data=opt.use_sampled_data, contrast=True, extra_data_loader=extra_data_loader if opt.full_test else None)
 
@@ -311,16 +312,16 @@ def main():
     # visualize
     if opt.visualize:
         print(opt.name)
-        framework.visualize(model, 100, ckpt=ckpt,
-                            part='train', exp_name=opt.name)
-        framework.visualize(model, 100, ckpt=ckpt,
-                            part='val', exp_name=opt.name)
+        # framework.visualize(model, 100, ckpt=ckpt,
+        #                     part='train', exp_name=opt.name)
+        # framework.visualize(model, 100, ckpt=ckpt,
+        #                     part='val', exp_name=opt.name)
         framework.visualize(model, 100, ckpt=ckpt,
                             part='test', exp_name=opt.name)
 
     # test
     precision, recall, f1, fp, fn, within, outer = framework.eval(model, opt.test_iter, ckpt=ckpt, finetuning=opt.eval_with_finetune,
-                                                                  finetuning_lr=3e-5, full_test=opt.full_test, finetuning_mix_rate=opt.finetuning_mix_rate, output_file=opt.output_file)
+                                                                  finetuning_lr=3e-5, full_test=opt.full_test, finetuning_mix_rate=False, output_file=opt.output_file)
     print("RESULT: precision: %.4f, recall: %.4f, f1:%.4f" %
           (precision, recall, f1))
     print('ERROR ANALYSIS: fp: %.4f, fn: %.4f, within:%.4f, outer: %.4f' %

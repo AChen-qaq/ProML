@@ -189,7 +189,6 @@ class ProML(util.framework.FewShotNERModel):
 
             support_emb = e_aug * self.mix_rate + e_tanl * (1 - self.mix_rate)
 
-
             tag = torch.cat(cur_support_labels)
 
             

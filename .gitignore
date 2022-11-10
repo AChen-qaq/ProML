@@ -14,3 +14,5 @@ data/onto*
 data/i2b2_raw.txt
 data/testing-PHI-Gold-fixed
 test.out
+no_sep.py
+plain_A_exp.py
