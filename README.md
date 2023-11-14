@@ -1,6 +1,6 @@
 # ProML: Prompt-Based Metric Learning for Few-shot NER
 
-This repo contains the source code for our paper:  [**Prompt-Based Metric Learning for Few-shot NER**](https://arxiv.org/abs/2211.04337). 
+This repo contains the source code for our paper:  [**Prompt-Based Metric Learning for Few-shot NER**](https://aclanthology.org/2023.findings-acl.451.pdf). 
 
 
 ## Requirements
